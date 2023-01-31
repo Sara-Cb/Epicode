@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sara CB">
-    <meta name="description" content="Il primo esercizio HTML">
+    <meta name="description" content="Blog ">
     <meta name="keyword" content="blog, sviluppo web">
     <title>Sviluppo di una pagina web - Blog Epicode</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -39,103 +39,104 @@
     <div id="container">
         <main>
             <article>
-            <section>
-                <div id="title">
-                    <h1>
-                        Come creare un template per i post
-                    </h1>
-                    <h4>
-                        di Mario Rossi - pubblicato il 25-10-2020
-                    </h4>
-                </div>
-                <div id="intro">
-                    <p>
-                        La prima cosa da fare è suddividere in blocchi logici la pagina,
-                        identificando le <b>parti comuni</b> da
-                        applicare a tutte le pagine.
-                        <br><br>
-                        Le varie aree saranno quindi suddivise in:
-                    </p>
-                    <ul>
-                        <li>Contenuti di intestazione del tag <code>&lt;header&gt;</code></li>
-                        <li>Contenuti centrali variabili del tag <code>&lt;main&gt;</code> (corpo principale)</li>
-                        <li>Contenuti di fine pagina comuni, da inserire nel tag <code>&lt;footer&gt;</code></li>
-                    </ul>
-                </div>
-            </section>
+                <section>
+                    <div id="title">
+                        <h1>
+                            Come creare un template per i post
+                        </h1>
+                        <h4>
+                            di Mario Rossi - pubblicato il 25-10-2020
+                        </h4>
+                    </div>
+                    <div id="intro">
+                        <p>
+                            La prima cosa da fare è suddividere in blocchi logici la pagina,
+                            identificando le <b>parti comuni</b> da
+                            applicare a tutte le pagine.
+                            <br><br>
+                            Le varie aree saranno quindi suddivise in:
+                        </p>
+                        <ul>
+                            <li>Contenuti di intestazione del tag <code>&lt;header&gt;</code></li>
+                            <li>Contenuti centrali variabili del tag <code>&lt;main&gt;</code> (corpo principale)</li>
+                            <li>Contenuti di fine pagina comuni, da inserire nel tag <code>&lt;footer&gt;</code></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section>
-                <div id="Formattazione">
-                    <h2>Formattazione del codice</h2>
-                    <p>Il testo dell'articolo dovrà essere
-                        formattato per identificare tutte le parti da <b>selezionare con i CSS.</b>
-                        Perciò i passi saranno:</p>
-                    <ol>
-                        <li>Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag appropriato
-                        </li>
-                        <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
-                        <li>Applicare gli stili CSS</li>
-                    </ol>
+                <section>
+                    <div id="Formattazione">
+                        <h2>Formattazione del codice</h2>
+                        <p>Il testo dell'articolo dovrà essere
+                            formattato per identificare tutte le parti da <b>selezionare con i CSS.</b>
+                            Perciò i passi saranno:</p>
+                        <ol>
+                            <li>Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag
+                                appropriato
+                            </li>
+                            <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
+                            <li>Applicare gli stili CSS</li>
+                        </ol>
+                        <p>
+                            L'applicazione di stili CSS è cresciuta negli anni fino a
+                            raggiungere la diffusione pressoché totale.
+                        </p>
+                    </div>
+                    <div id="TableFormattazione">
+                        <table>
+                            <caption>Diffusione dei CSS</caption>
+                            <thead>
+                                <tr>
+                                    <th>Anno</th>
+                                    <th>% di utilizzo</th>
+                                    <th>Supporto browsers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2000</td>
+                                    <td>20%</td>
+                                    <td>17%</td>
+                                </tr>
+                                <tr>
+                                    <td>2002</td>
+                                    <td>35%</td>
+                                    <td>22%</td>
+                                </tr>
+                                <tr>
+                                    <td>2004</td>
+                                    <td>45%</td>
+                                    <td>42%</td>
+                                </tr>
+                                <tr>
+                                    <td>2008</td>
+                                    <td>80%</td>
+                                    <td>51%</td>
+                                </tr>
+                                <tr>
+                                    <td>2012</td>
+                                    <td>100%</td>
+                                    <td>76%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section id="tool">
                     <p>
-                        L'applicazione di stili CSS è cresciuta negli anni fino a
-                        raggiungere la diffusione pressoché totale.
+                        Un test di validazione potrà essere fatto tramite il
+                        <a href="https://jigsaw.w3.org/css-validator/" target="_blank">tool online</a>
+                        dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto
+                        il nostro obiettivo ed essere stati dei veri developers come loro:
                     </p>
-                </div>
-                <div id="TableFormattazione">
-                    <table>
-                        <caption>Diffusione dei CSS</caption>
-                        <thead>
-                            <tr>
-                                <th>Anno</th>
-                                <th>% di utilizzo</th>
-                                <th>Supporto browsers</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2000</td>
-                                <td>20%</td>
-                                <td>17%</td>
-                            </tr>
-                            <tr>
-                                <td>2002</td>
-                                <td>35%</td>
-                                <td>22%</td>
-                            </tr>
-                            <tr>
-                                <td>2004</td>
-                                <td>45%</td>
-                                <td>42%</td>
-                            </tr>
-                            <tr>
-                                <td>2008</td>
-                                <td>80%</td>
-                                <td>51%</td>
-                            </tr>
-                            <tr>
-                                <td>2012</td>
-                                <td>100%</td>
-                                <td>76%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            <section id="tool">
-                <p>
-                    Un test di validazione potrà essere fatto tramite il
-                    <a href="https://jigsaw.w3.org/css-validator/" target="_blank">tool online</a>
-                    dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto
-                    il nostro obiettivo ed essere stati dei veri developers come loro:
-                </p>
-                <div id="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dvOvHXruEDM"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </section>
+                    <div id="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dvOvHXruEDM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </section>
             </article>
         </main>
         <div id="newsletter">
@@ -148,7 +149,7 @@
             <form>
                 <fieldset>
                     <input type="email" id="email" name="email" placeholder="Inserisci l'email" required>
-                    <button type="submit" >Iscriviti!</button>
+                    <button type="submit">Iscriviti!</button>
                 </fieldset>
             </form>
         </div>
