@@ -15,20 +15,20 @@
     <!-- logo e nav-->
     <header>
         <div id="logo">
-            <a href="https://epicode.com/it" title="Epicode Home"><img src="assets/img/EPICODE-pitto-color.png"
+            <a href="https://epicode.com/it" title="Epicode Home" target="_blank"><img src="assets/img/EPICODE-pitto-color.png"
                     width="100" alt="Logo Epicode" id="logo"></a><br>
             <label for="logo">Epicode - Il blog dei developers</label>
         </div>
         <nav id="menuNav">
             <ul>
                 <li>
-                    <a href="" title="Home">Home</a>
+                    <a href="javascript:void(0)" title="Home">Home</a>
                 </li>
                 <li>
-                    <a href="" title="Articoli">Articoli</a>
+                    <a href="javascript:void(0)" title="Articoli">Articoli</a>
                 </li>
                 <li>
-                    <a href="" title="Jobs">Jobs</a>
+                    <a href="javascript:void(0)" title="Jobs">Jobs</a>
                 </li>
             </ul>
         </nav>
@@ -139,7 +139,7 @@
                 </section>
             </article>
         </main>
-        
+
         <div id="newsletter">
             <h2>
                 Novità
@@ -147,10 +147,10 @@
             <p>
                 Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:
             </p>
-            <form>
+            <form method="get" action="javascript:void(0)">
                 <fieldset>
                     <input type="email" id="email" name="email" placeholder="Inserisci l'email" required>
-                    <button type="submit">Iscriviti!</button>
+                    <button type="submit" onclick="alert('Iscrizione effettuata')">Iscriviti!</button>
                 </fieldset>
             </form>
         </div>
