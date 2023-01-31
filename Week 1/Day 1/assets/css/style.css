@@ -1,0 +1,14 @@
+#esperienze, #formazione {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    padding: 5px;
+}
