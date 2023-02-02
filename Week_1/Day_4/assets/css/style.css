@@ -59,7 +59,8 @@ header ul {
 font-size: 2em;
 }
 
-.text {
+.text {  
+ 
     color: blueviolet;
     font-weight: bold;
 }
@@ -71,6 +72,9 @@ font-size: 2em;
 }
 
 /* TABELLE */
+form {
+    border: solid 1px black;
+}
 
 /* FORM */
 
