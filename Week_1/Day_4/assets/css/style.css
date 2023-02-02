@@ -29,6 +29,16 @@ header {
 header a {
     color: white;
     text-decoration: none;
+    padding-left: none;
+    padding-right: none;
+}
+
+/*aggiunto durante la revisione*/
+header a::before {
+    content: ""
+}
+header a::after {
+    content: ""
 }
 
 header ul {
@@ -72,9 +82,7 @@ font-size: 2em;
 }
 
 /* TABELLE */
-form {
-    border: solid 1px black;
-}
+
 
 /* FORM */
 
