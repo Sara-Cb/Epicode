@@ -62,6 +62,7 @@ header ul {
     width: 90%;
     margin: 0 auto; 
     background-color: aliceblue;
+    border: 1px solid black;
     padding: 20px;
 }
 
