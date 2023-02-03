@@ -84,6 +84,12 @@ header, header div {
     margin: 0 auto;
     background-color: #f04c2f;
     color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#guarantee h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 #guarantee cite {
@@ -91,7 +97,7 @@ header, header div {
 }
 
 #guarantee cite span {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 .cards {
