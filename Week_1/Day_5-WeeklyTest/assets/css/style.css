@@ -1,0 +1,130 @@
+/*
+
+
+Testimonianze: #e22d0e
+
+
+Bordi
+Bordo schede: #dee1e3
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    line-height: 1.65;
+}
+
+header, header div {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    text-align: center;
+}
+
+#logo {
+    height: 40%;
+    margin-top: 20px;
+}
+
+#container {
+    box-sizing: border-box;
+    margin: 0 auto; 
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#intro {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: -30px;
+    width: 100%;
+    height: 360px;
+    padding-top: 30px;
+    background-image: url("../img/banner.jpg");
+}
+
+#partiamo a {
+    display: block;
+    margin: 0 auto;
+    background-color: #f04c2f;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.infotitles {
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    line-height: 1.5;
+}
+
+.info, #guarantee {
+    padding: 20px;
+}
+
+#round-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 10px;
+    background-color:#25a2c3; 
+    text-align: center;
+}
+
+footer h2, footer hr {
+    color: white;
+}
+
+footer ul, footer a, footer p {
+    color: #c8e7f0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0%;
+}
+
+footer hr {
+    width: 150px;
+}
