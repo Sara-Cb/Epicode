@@ -92,6 +92,14 @@ header, header div {
     font-weight: bold;
 }
 
+blockquote p {
+    font-style: italic;
+}
+
+blockquote cite {
+    font-style: normal;
+}
+
 #ceo {
     font-size: 0.8em;
 }
