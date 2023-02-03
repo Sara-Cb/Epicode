@@ -92,12 +92,8 @@ header, header div {
     font-weight: bold;
 }
 
-#guarantee cite {
-    font-style: normal;
-}
-
-#guarantee cite span {
-    font-size: 0.7em;
+#ceo {
+    font-size: 0.8em;
 }
 
 .cards {
