@@ -6,10 +6,12 @@ var Pet = 'cane';*/
 var petPreferito = 'criceto';
 var PetPreferito = 'coniglio';
 
-var $pet = 'giraffa';
-console.log($pet);
-var _pet = 'leone';
-console.log(_pet);
+var petCriceto = 'criceto';
+console.log(petCriceto);
+var pet_giraffa = 'giraffa';
+console.log(pet_giraffa);
+var petleone = 'leone';
+console.log(petleone);
 var _pet2 = 'pantera';
 document.write(_pet2);
 
