@@ -5,7 +5,10 @@ html, body {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
-    margin-left: 80px;
+}
+
+.container {
+    margin-left: 5%;
 }
 
 #imgLink img {
@@ -22,4 +25,7 @@ a {
     text-decoration: underline;
 }
 
+ul li {
+    margin-left: 2%;
+}
 
