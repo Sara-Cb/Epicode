@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
 html, body {
     background-color: #415fe1;
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    margin-left: 80px;
 }
+
+#imgLink img {
+    width: 450px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#imgLink:hover a {
+    color: black;
+    text-decoration: underline;
+}
+
 
