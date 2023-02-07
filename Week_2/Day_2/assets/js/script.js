@@ -23,7 +23,7 @@ document.getElementById('final').innerHTML = nome1;     //valore di partenza
 
 
 //ESERCIZIO3 - PT.2
-var nome2 = 'Carla';        //valore di partenza
+/*var nome2 = 'Carla';        //valore di partenza
 
 {
     let nome2 = 'Mario';            //valore modificato solo in gruppo
@@ -32,6 +32,14 @@ var nome2 = 'Carla';        //valore di partenza
 
 document.getElementById('let3').innerHTML = nome2;      //valore di partenza
 document.getElementById('final2').innerHTML = nome2;    //valore di partenza
+*/
+document.getElementById('let2').innerHTML = nome1;
+{
+    var nome1 = 'Carla';
+}
+document.getElementById('let3').innerHTML = nome1;
+document.getElementById('final2').innerHTML = nome1;
+
 
 //ESERCIZIO4
 
@@ -55,4 +63,4 @@ document.getElementById('valore3').innerHTML += iniziale*3;
 document.getElementById('valore4').innerHTML += iniziale/3;
 
 //riga6
-document.getElementById('valore5').innerHTML += iniziale + ' è un numero';  //oppure  const tipo = ' è un numero'; e poi sotto + tipo;
+document.getElementById('valore5').innerHTML += iniziale + ' è un numero';  //oppure  const type = ' è un numero'; e poi sotto + type;
