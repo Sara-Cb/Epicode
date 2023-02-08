@@ -71,7 +71,7 @@ if(totalShoppingCart>50){
 };
 
 document.getElementById('esercizio5_').innerHTML += totalCost;
-console.log('Es. 5 - ' + 'Il tuo totale è: ' + totalCost)
+console.log('Es. 5 - ' + 'Il tuo totale è: ' + totalCost);
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, 
@@ -114,15 +114,20 @@ console.log('Es. 7 - ' + 'Dal minore al maggiore: ' + riordiniamo);
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-const es8n1 = 8
+const es8n1 = 'La nonna'
 document.getElementById('es8n1').innerHTML = es8n1;
+var domanda = typeof es8n1
 
+var numero = (domanda == 'number') ? 'Sì' : 'No';
+document.getElementById('type').innerHTML = numero;
+
+console.log('Es. 8 - ' + es8n1 + ' è un numero? '+ numero);
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
