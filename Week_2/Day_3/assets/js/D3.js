@@ -211,10 +211,10 @@ const es11 = {
   skills: [" javascript", " html", " css"],
 };
 
-var city = 'Toronto';
-es11.push(city);
+//var city = ' Toronto';
+es11.splice(3, 0, city='Toronto');
 
-document.getElementById('esercizio11').innerHTML = ;
+document.getElementById('esercizio11').innerHTML = es11.name + es11.lastName + es11.skills + es11.city;
 
 
 
