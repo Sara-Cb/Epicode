@@ -97,11 +97,7 @@ console.log('Es. 6 - ' + 'Il tuo totale è: ' + totalCost);
   dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
-/* SCRIVI QUI LA TUA RISPOSTA */
-var es7n1 = 33;
-var es7n2 = 16;
-var es7n3 = 23;
-
+/*
 var riordiniamo = [es7n1, es7n2, es7n3];
 document.getElementById('esercizio7').innerHTML += riordiniamo;
 
@@ -109,22 +105,56 @@ riordiniamo.sort();
 document.getElementById('esercizio7_').innerHTML += riordiniamo;
 
 console.log('Es. 7 - ' + 'Dal minore al maggiore: ' + riordiniamo);
-
-/* ESERCIZIO 8
-  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-const es8n1 = 'La nonna'
-document.getElementById('es8n1').innerHTML = es8n1;
-var domanda = typeof es8n1
+var es7n1 = 33;
+var es7n2 = 23;
+var es7n3 = 3;
 
-var numero = (domanda == 'number') ? 'Sì' : 'No';
+var riordiniamo = [es7n1, es7n2, es7n3];
+document.getElementById('esercizio7').innerHTML += riordiniamo;
+
+if (es7n1>es7n2 && es7n1>es7n3){
+  if (es7n2>es7n3){
+    riordiniamo = [es7n3, es7n2, es7n1];
+  }else{
+    riordiniamo = [es7n2, es7n3, es7n1];
+  }
+}else if (es7n2>es7n1 && es7n2>es7n3){
+  if (es7n1>es7n3){
+    riordiniamo = [es7n3, es7n1, es7n2];
+  }else{
+    riordiniamo = [es7n1, es7n3, es7n2];
+  }
+}else {
+  if (es7n1>es7n2){
+    riordiniamo = [es7n2, es7n1, es7n3];
+  }else{
+    riordiniamo = [es7n1, es7n2, es7n3];
+  }
+};
+
+document.getElementById('esercizio7_').innerHTML += riordiniamo;
+
+console.log('Es. 7 - ' + 'Dal minore al maggiore: ' + riordiniamo);
+
+
+/* ESERCIZIO 8
+  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no 
+  (suggerimento: cerca su un motore di ricerca "typeof").
+*/
+/* SCRIVI QUI LA TUA RISPOSTA */
+const es8n1 = 8
+document.getElementById('es8n1').innerHTML = es8n1;
+
+var numero = (typeof es8n1 == 'number') ? 'Sì' : 'No';
 document.getElementById('type').innerHTML = numero;
 
 console.log('Es. 8 - ' + es8n1 + ' è un numero? '+ numero);
 
 /* ESERCIZIO 9
-  Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
+  Crea un algoritmo per controllare se un numero fornito sia pari o dispari 
+  (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
