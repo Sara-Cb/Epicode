@@ -52,10 +52,10 @@ const es4n2 = 27;
 
 var verificaOtto =
   es4n1 == 8 ||
-  es4n2 == 8 ||
-  es4n1 + es4n2 == 8 ||
-  es4n1 - es4n2 == 8 ||
-  es4n2 - es4n1 == 8
+    es4n2 == 8 ||
+    es4n1 + es4n2 == 8 ||
+    es4n1 - es4n2 == 8 ||
+    es4n2 - es4n1 == 8
     ? "Almeno una delle opzioni è vera"
     : "Nessuna delle opzioni è vera";
 
@@ -169,10 +169,10 @@ console.log("Es. 8 - " + es8n1 + " è un numero? " + numero);
 const es9n1 = 345;
 document.getElementById("es9n1").innerHTML = es9n1;
 
-var pari = (es9n1%2 == 0) ? "Sì" : "No";
+var pari = (es9n1 % 2 == 0) ? "Sì" : "No";
 document.getElementById("esercizio9").innerHTML = pari;
 
-console.log("Es. 8 - " + es9n1 + " è un numero pari? " + pari);
+console.log("Es. 9 - " + es9n1 + " è un numero pari? " + pari);
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -197,27 +197,24 @@ if (es10n1 < 5) {
   rapporto = " è maggiore o uguale a 10";
 }
 
-console.log(es10n1 + rapporto);
+console.log("Es. 10 - " + es10n1 + rapporto);
 document.getElementById('esercizio10').innerHTML = es10n1 + rapporto;
 
 
 /* ESERCIZIO 11
-  Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
+  Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", 
+  il cui valore sarà "Toronto".
 */
 
-const es11 = {
-  name: "John",
-  lastName: " Doe",
-  skills: [" javascript", " html", " css"],
+const me = {
+  name: 'John',
+  lastName: 'Doe',
+  skills: ['javascript', 'html', 'css'],
 };
 
-//var city = ' Toronto';
-es11.splice(3, 0, city='Toronto');
+me.city = 'Toronto'; //urlo e mi dispero perchè city non diventa property di me
 
-document.getElementById('esercizio11').innerHTML = es11.name + es11.lastName + es11.skills + es11.city;
-
-
-
+document.getElementById('esercizio11').innerHTML = me.name + ' ' + me.lastName + ', (' + me.skills + '), ' + me.city;
 
 
 /* ESERCIZIO 12
@@ -229,8 +226,8 @@ document.getElementById('esercizio11').innerHTML = es11.name + es11.lastName + e
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
-
-
+me.skills.pop()
+document.getElementById('esercizio11').innerHTML = me.name + ' ' + me.lastName + ', (' + me.skills + '), ' + city;
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
