@@ -273,9 +273,16 @@ console.log(characters);
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
 */
 {
-let i = parseInt(Math.random()*starWarsCharacters.length);
+let i = Math.floor(Math.random()*starWarsCharacters.length);
+const selectedCharacter = starWarsCharacters[i];
 
 
+selectedCharacter.print =
+  'The name of this ' + selectedCharacter.gender + ', born in the year ' + 
+  selectedCharacter.birth_year + ', is ' + selectedCharacter.name +
+  ', they\'re ' + selectedCharacter.height + 'cm tall, for a weight of ' +
+  selectedCharacter.mass + 'kg. Their ' + selectedCharacter.hair_color + ' hair and ' +
+  selectedCharacter.eye_color + ' eyes look great on their ' + selectedCharacter.skin_color + ' skin tone. ';
 
-
+console.log('Random character description: ' + selectedCharacter.print);
 }
