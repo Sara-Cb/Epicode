@@ -212,31 +212,54 @@ const me = {
   skills: ['javascript', 'html', 'css'],
 };
 
-me.city = 'Toronto'; //urlo e mi dispero perchè city non diventa property di me
+me.city = 'Toronto'; 
+console.log('Es. 11 -' + me);
+document.getElementById('esercizio11').innerHTML = `${me.name} ${me.lastName}, skilled in ${me.skills}, lives in ${me.city}`;
 
-document.getElementById('esercizio11').innerHTML = me.name + ' ' + me.lastName + ', (' + me.skills + '), ' + me.city;
+
+//document.getElementById('esercizio11').innerHTML = me.name + ' ' + me.lastName + ', (' + me.skills + '), ' + me.city;
 
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
+me.lastName = '';
+console.log('Es. 12 -' + me);
+document.getElementById('esercizio12').innerHTML = `${me.name} ${me.lastName}, skilled in ${me.skills}, lives in ${me.city}`;
 
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
-me.skills.pop()
-document.getElementById('esercizio11').innerHTML = me.name + ' ' + me.lastName + ', (' + me.skills + '), ' + city;
+me.skills.pop();
+console.log('Es. 13 -' + me);
+document.getElementById('esercizio13').innerHTML = `${me.name} ${me.lastName}, skilled in ${me.skills}, lives in ${me.city}`;
+
+//document.getElementById('esercizio11').innerHTML = me.name + ' ' + me.lastName + ', (' + me.skills + '), ' + city;
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
+var array14 = []
+array14.push('1')
+array14.push('2')
+array14.push('3')
+array14.push('4')
+array14.push('5')
+array14.push('6')
+array14.push('7')
+array14.push('8')
+array14.push('9')
+array14.push('10')
 
-
-
+console.log('Es. 14 -' + array14);
+document.getElementById('esercizio14').innerHTML = array14;
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-
+array14.pop();
+array14.push('100')
+console.log('Es. 15 -' + array14);
+document.getElementById('esercizio15').innerHTML = array14;
