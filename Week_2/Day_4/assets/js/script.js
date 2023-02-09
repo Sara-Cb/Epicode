@@ -126,16 +126,14 @@ console.log(characters);
 */
 var femaleCharacters = [];
 
+for (let i=0; i<starWarsCharacters.length; i++){
+if (starWarsCharacters[i].gender == 'female'){
 femaleCharacters.push({
-    name: starWarsCharacters[4].name, 
-    hair_color: starWarsCharacters[4].hair_color, 
-    eye_color: starWarsCharacters[4].eye_color},
-    {
-    name: starWarsCharacters[6].name, 
-    hair_color: starWarsCharacters[6].hair_color, 
-    eye_color: starWarsCharacters[6].eye_color   
-    });
-
+    name: starWarsCharacters[i].name, 
+    hair_color: starWarsCharacters[i].hair_color, 
+    eye_color: starWarsCharacters[i].eye_color});
+}
+}
 console.log(femaleCharacters);
 
 /* ESERCIZIO 4
