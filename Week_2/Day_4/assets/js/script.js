@@ -278,6 +278,6 @@ Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharac
 let i = Math.random()*starWarsCharacters.length;
 console.log(i);
 
-var stampa = console.log(starWarsCharacters[i].)
+//var stampa = console.log(starWarsCharacters[i].)
 
 }
