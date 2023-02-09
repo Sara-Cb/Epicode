@@ -275,9 +275,9 @@ console.log(characters);
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
 */
 {
-let i = Math.random()*starWarsCharacters.length;
-console.log(i);
+let i = parseInt(Math.random()*starWarsCharacters.length);
 
-//var stampa = console.log(starWarsCharacters[i].)
+
+
 
 }
