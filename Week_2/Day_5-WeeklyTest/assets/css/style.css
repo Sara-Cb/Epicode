@@ -103,7 +103,7 @@ button {
     box-shadow: 1px 5px 35px 5px rgba(225,225,225,0.15);
 }
 
-#equal {
+#equal, #AC {
     width: 49%;
     min-height: 80px;
     max-height: 100px;
@@ -112,6 +112,9 @@ button {
     padding: 0;
     font-size: 1.8rem;
     border: 0;
+}
+
+#equal {
     -webkit-box-shadow: 1px 5px 35px 5px rgba(225,225,225,0.15); 
     box-shadow: 1px 5px 35px 5px rgba(225,225,225,0.15);color: rgb(5, 5, 5);
     background-color: rgb(35, 164, 112);
