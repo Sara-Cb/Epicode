@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author="Sara_CB">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator JS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>My calculator</h1>
+            <h2>Built with HTML, CSS and JS</h2>
+        </div>
+        <form id="calculator">
+            <div id="displayDiv">
+                <input type="number" name="display" id="display" placeholder="0" disabled>
+            </div>
+            <div id="tastiDiv">
+                <div class="rows" id="firstRow">
+                    <button class="tasti" name="AC" id="AC" value=" ">AC</button>
+                    <button class="tasti" name="del" id="del" value=" "> &larr; </button>
+                    <button class="tasti" name="divide" id="divide" value="/"> &div; </button>
+                    <button class="tasti" name="multiply" id="multiply" value="*">x</button>
+                </div>
+                <div class="rows" id="secondRow">
+                    <button class="tasti" name="seven" id="seven" value="7">7</button>
+                    <button class="tasti" name="eight" id="eight" value="8"> 8 </button>
+                    <button class="tasti" name="nine" id="nine" value="9"> 9 </button>
+                    <button class="tasti" name="minus" id="minus" value="-">-</button>
+                </div>
+                <div class="rows" id="thirdRow">
+                    <button class="tasti" name="four" id="four" value="4">4</button>
+                    <button class="tasti" name="five" id="five" value="5">5</button>
+                    <button class="tasti" name="six" id="six" value="6">6</button>
+                    <button class="tasti" name="plus" id="plus" value="+">+</button>
+                </div>
+                <div class="rows" id="fourthRow">
+                    <button class="tasti" name="one" id="one" value="1">1</button>
+                    <button class="tasti" name="two" id="two" value="2">2</button>
+                    <button class="tasti" name="three" id="three" value="3">3</button>
+                    <button class="tasti" name="comma" id="comma" value=",">,</button>
+                </div>
+                <div class="rows" id="lastRow">
+                    <button class="tasti" name="double0" id="double0" value="00">00</button>
+                    <button class="tasti" name="zero" id="zero" value="0">0</button>
+                    <input type="button" class="tasti" name="equal" id="equal" value="=">
+                </div>
+            </div>
+        </form>
+        <hr>
+
+        <i><div id="errors">
+        
+        </div></i>
+
+        <script src="assets/js/script.js"></script>
+    </div>
+</body>
+
+</html>
