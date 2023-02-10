@@ -15,42 +15,42 @@
             <h1>My calculator</h1>
             <h2>Built with HTML, CSS and JS</h2>
         </div>
-        <form id="calculator">
+        <div id="calculator">
             <div id="displayDiv">
-                <input type="number" name="display" id="display" placeholder="0" disabled>
+                <input type="text" name="display" id="display" placeholder="0" disabled>
             </div>
             <div id="tastiDiv">
                 <div class="rows" id="firstRow">
                     <button name="AC" id="AC" value=" " onclick="AC()">AC</button>
                     <button name="del" id="del" value=" "> &larr; </button>
-                    <button class="op" name="divide" id="divide" value="/"> &div; </button>
-                    <button class="op" name="multiply" id="multiply" value="*">x</button>
+                    <button class="op" name="divide" id="divide" value="/" onclick="display('/')"> &div; </button>
+                    <button class="op" name="multiply" id="multiply" value="*" onclick="display('*')">x</button>
                 </div>
                 <div class="rows" id="secondRow">
                     <button class="tasti" name="seven" id="seven" value="7" onclick="display(7)">7</button>
                     <button class="tasti" name="eight" id="eight" value="8" onclick="display(8)"> 8 </button>
                     <button class="tasti" name="nine" id="9" value="9" onclick="display(9)"> 9 </button>
-                    <button class="op" name="minus" id="minus" value="-" onclick="display(this.value)">-</button>
+                    <button class="op" name="minus" id="minus" value="-" onclick="display('-')">-</button>
                 </div>
                 <div class="rows" id="thirdRow">
-                    <button class="tasti" name="four" id="four" value="4">4</button>
-                    <button class="tasti" name="five" id="five" value="5">5</button>
-                    <button class="tasti" name="six" id="six" value="6">6</button>
-                    <button class="op" name="plus" id="plus" value="+">+</button>
+                    <button class="tasti" name="four" id="four" value="4" onclick="display(4)">4</button>
+                    <button class="tasti" name="five" id="five" value="5" onclick="display(5)">5</button>
+                    <button class="tasti" name="six" id="six" value="6" onclick="display(6)">6</button>
+                    <button class="op" name="plus" id="plus" value="+"onclick="display('+')">+</button>
                 </div>
                 <div class="rows" id="fourthRow">
-                    <button class="tasti" name="one" id="one" value="1">1</button>
-                    <button class="tasti" name="two" id="two" value="2">2</button>
-                    <button class="tasti" name="three" id="three" value="3">3</button>
-                    <button class="tasti" name="comma" id="comma" value=",">,</button>
+                    <button class="tasti" name="one" id="one" value="1" onclick="display(1)">1</button>
+                    <button class="tasti" name="two" id="two" value="2" onclick="display(2)">2</button>
+                    <button class="tasti" name="three" id="three" value="3" onclick="display(3)">3</button>
+                    <button class="tasti" name="comma" id="comma" value="," onclick="display('.')">,</button>
                 </div>
                 <div class="rows" id="lastRow">
-                    <button class="tasti" name="double0" id="double0" value="00">00</button>
-                    <button class="tasti" name="zero" id="zero" value="0">0</button>
-                    <input type="button" name="equal" id="equal" value="=">
+                    <button class="tasti" name="double0" id="double0" value="00" onclick="display(00)">00</button>
+                    <button class="tasti" name="zero" id="zero" value="0" onclick="display(0)">0</button>
+                    <input type="button" name="equal" id="equal" value="=" onclick="equal()">
                 </div>
             </div>
-        </form>
+        </div>
         <hr>
 
         <i><div id="errors">
