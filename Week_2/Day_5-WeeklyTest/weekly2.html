@@ -21,22 +21,22 @@
             </div>
             <div id="tastiDiv">
                 <div class="rows" id="firstRow">
-                    <button class="tasti" name="AC" id="AC" value=" ">AC</button>
-                    <button class="tasti" name="del" id="del" value=" "> &larr; </button>
-                    <button class="tasti" name="divide" id="divide" value="/"> &div; </button>
-                    <button class="tasti" name="multiply" id="multiply" value="*">x</button>
+                    <button name="AC" id="AC" value=" " onclick="AC()">AC</button>
+                    <button name="del" id="del" value=" "> &larr; </button>
+                    <button class="op" name="divide" id="divide" value="/"> &div; </button>
+                    <button class="op" name="multiply" id="multiply" value="*">x</button>
                 </div>
                 <div class="rows" id="secondRow">
-                    <button class="tasti" name="seven" id="seven" value="7">7</button>
-                    <button class="tasti" name="eight" id="eight" value="8"> 8 </button>
-                    <button class="tasti" name="nine" id="nine" value="9"> 9 </button>
-                    <button class="tasti" name="minus" id="minus" value="-">-</button>
+                    <button class="tasti" name="seven" id="seven" value="7" onclick="display(7)">7</button>
+                    <button class="tasti" name="eight" id="eight" value="8" onclick="display(8)"> 8 </button>
+                    <button class="tasti" name="nine" id="9" value="9" onclick="display(9)"> 9 </button>
+                    <button class="op" name="minus" id="minus" value="-" onclick="display(this.value)">-</button>
                 </div>
                 <div class="rows" id="thirdRow">
                     <button class="tasti" name="four" id="four" value="4">4</button>
                     <button class="tasti" name="five" id="five" value="5">5</button>
                     <button class="tasti" name="six" id="six" value="6">6</button>
-                    <button class="tasti" name="plus" id="plus" value="+">+</button>
+                    <button class="op" name="plus" id="plus" value="+">+</button>
                 </div>
                 <div class="rows" id="fourthRow">
                     <button class="tasti" name="one" id="one" value="1">1</button>
@@ -47,7 +47,7 @@
                 <div class="rows" id="lastRow">
                     <button class="tasti" name="double0" id="double0" value="00">00</button>
                     <button class="tasti" name="zero" id="zero" value="0">0</button>
-                    <input type="button" class="tasti" name="equal" id="equal" value="=">
+                    <input type="button" name="equal" id="equal" value="=">
                 </div>
             </div>
         </form>
