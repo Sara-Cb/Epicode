@@ -109,13 +109,27 @@ console.log('Es.6 - ' + check3and7(10));
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
+var six66 = 'live';
 
+var reverseString = function(string){
+    var invString = "";
+    for (var i = string.length - 1; i >= 0; i--) {
+         invString += string[i];
+    }
+    return invString;
+    }
+
+console.log('Es.7 - ' + reverseString(six66));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
-/* SCRIVI QUI LA TUA RISPOSTA */
+var phrase = 'ogni lettera deve essere maiuscola';
+
+upperFirst = function(string){
+    
+}
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
