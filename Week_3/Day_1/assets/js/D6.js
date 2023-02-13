@@ -87,7 +87,7 @@ var epify = function(string){
     }
 }
 
-console.log('Es.7 - ' + epify(school));
+console.log('Es.5 - ' + epify(school));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. 
@@ -127,15 +127,32 @@ console.log('Es.7 - ' + reverseString(six66));
 */
 var phrase = 'ogni lettera deve essere maiuscola';
 
-upperFirst = function(string){
-    
+var upperFirst = function(string){
+    let parole = string.split(' ');
+    for (let i = 0; i < parole.length; i++) {
+        parole[i] = parole[i][0].toUpperCase() + parole[i].substr(1);
+    };
+    return string = parole.join(' ');
 }
 
+console.log('Es.8 - ' + upperFirst(phrase));
+
+
 /* ESERCIZIO 9
- Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
- della stringa originale.
+ Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo 
+ e l'ultimo carattere della stringa originale.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+var frutto = 'Mango';
+
+var cutString = function(string){
+    let lastLetter = string.length - 2;
+    var fruttino = string.substr(1, lastLetter);
+    return fruttino
+}
+
+console.log('Es.9 - ' + cutString(frutto));
 
 
 /* ESERCIZIO 10
