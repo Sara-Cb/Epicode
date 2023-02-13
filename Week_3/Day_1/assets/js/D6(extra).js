@@ -1,11 +1,29 @@
 // Esercizi aggiuntivi (facoltativi) per D4
 
 /* EXTRA 1
- Scrivi una funzione chiamata "checkArray" che riceve un array di numeri casuali (creati con la funzione "giveMeRandom") 
+ Scrivi una funzione chiamata "checkArray" che riceve un array di numeri casuali 
+ (creati con la funzione "giveMeRandom") 
  e per ogni elemento stampa in console se il suo valore è maggiore di 5 o no.
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
-/* SCRIVI QUI LA TUA RISPOSTA */
+var casual = [];
+var checkArray = function(array){
+    var sum = 0;
+    for (let i = 0; i < 10; i++) {
+        const randomNumber = Math.floor(Math.random() * 10);
+        array.push(randomNumber);
+        if (array[i]> 5){
+            sum += array[i];
+            array[i] += ' è grande';
+        }
+        else {
+            array[i] += ' è piccolo';
+        }
+    }
+    return 'Ho un insieme di numeri dove: ' + array + '. La somma dei numeri grandi è: ' + sum;
+}
+
+console.log('Es. Extra 1 - ' + checkArray(casual));
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: 
@@ -18,9 +36,6 @@ function Acquisto(price, name, id, quantity) {
     this.name = name;
     this.id = id;
     this.quantity = quantity;
-    //this.finalPrice = function() {
-    //    return this.finalPrice = this.price * this.quantity;
-    // }
 };
 
 const edera = new Acquisto (10, 'Edera', 'pianta', 2);
@@ -92,18 +107,24 @@ console.log('Es. Extra 5 - ' + latestShoppingCart().name)
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
- La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
+ La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè 
+ il numero casuale non è maggiore di x per tre volte di fila.
 */
 
 var loopUntil = function(x){
-    (x>=0 && x<=9) ? true : alert('choose a number between 0 and 9')
-    let casual 
+    if (x>=0 && x<=9) {
+
+    } 
+    else {alert('choose a number between 0 and 9')} 
 }
 
 /* EXTRA 7
-Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
+Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna 
+la media aritmetica. 
+La funzione salta automaticamente i valori non numerici nell'array.
 */
-/* SCRIVI QUI LA TUA RISPOSTA */
+
+
 
 
 /* EXTRA 8
@@ -122,14 +143,15 @@ var piuLunga = function(max){
     return 'La parola più lunga è: ' + lunga + ', perché ha ' + max + ' lettere ';
 };
 
-console.log('Es. Extra 7 - ' + piuLunga())
+console.log('Es. Extra 8 - ' + piuLunga())
 
 /* EXTRA 9
- Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro 
- stringa chiamato "emailContent", e torna un valore booleano.
- La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
+ Crea una funzione per creare un filtro anti-spam per la tua casella email. 
+ La funzione riceve un parametro stringa chiamato "emailContent", e torna un 
+ valore booleano.
+ La funzione deve ritornare true se "emailContent" non contiene le parole 
+ "SPAM" o "SCAM".
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 10
@@ -155,4 +177,3 @@ console.log('Es. Extra 10 - ' + days(giorno));
  "10","11","12"]
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
