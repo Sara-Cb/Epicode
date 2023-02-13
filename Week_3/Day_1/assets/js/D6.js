@@ -76,7 +76,18 @@ console.log('Es.4 - ' + boundary(65.5));
  ritornare la stringa originale senza alterarla.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
+const school = 'La scuola che frequento'
+const mySchool = 'EPICODE è la scuola che frequento'
 
+var epify = function(string){
+    if(string.startsWith('EPICODE')){
+        return string
+    } else {
+        return string = 'EPICODE - ' + string
+    }
+}
+
+console.log('Es.7 - ' + epify(school));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. 
@@ -98,7 +109,7 @@ console.log('Es.6 - ' + check3and7(10));
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-/* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
