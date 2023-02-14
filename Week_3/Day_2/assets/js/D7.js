@@ -217,6 +217,16 @@ const movies = [
 /* ESERCIZIO 12
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+function trovaFilmVecchio(movies) {
+  let filmVecchio = movies[0];
+  movies.forEach(function (movie) {
+    if (movie.releaseYear < filmVecchio.releaseYear) {
+      filmVecchio = movie;
+    }
+  });
+  return filmVecchio;
+}
+console.log(trovaFilmVecchio(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
@@ -246,13 +256,12 @@ var filmSelect = function(array) {
     var opt = document.createElement('option');
     opt.value = element.imdbID;
     opt.innerHTML = element.Title;
-    opt.details = `Il film ${element.Title} (cod.${element.imdbID}), è uscito nell'anno ${element.Year} `;
     select.appendChild(opt).innerHTML; 
   });
 }
 
 select.addEventListener('change', (event) => {
-  moviedetails.innerHTML = `${event.target.text}`;
+  moviedetails.innerHTML = `Il film selezionato ha il codice ${event.target.value}`;
 });
 
 window.addEventListener('load', filmSelect(movies));
@@ -264,4 +273,21 @@ window.addEventListener('load', filmSelect(movies));
 
 /* ESERCIZIO 18 (EXTRA)
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
+*/
+const searching = document.getElementById('search').value;
+const ricerca = document.getElementById('search');
+const filmTrovati = document.getElementById('filmTrovati');
+
+/*
+ricerca.addEventListener('click', function(movies, searching){
+array.forEach(element => {
+    if(element.Title.substring(searching)){
+        var document.createElement('li'),
+
+        filmTrovati.appendChild(li)
+    } else {
+        return string = 'EPICODE - ' + string
+    }
+  }
+});
 */
