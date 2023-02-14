@@ -62,7 +62,7 @@ console.log("Es 4 - " + arrayCasuale);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
 
-const array = [99,26,39,10,33,66,84,5,4,42];
+const array = [99, 26, 39, 10, 33, 66, 84, 5, 4, 42];
 
 function filtraPari(array) {
   const arrayPari = array.filter((numero) => numero % 2 === 0);
@@ -251,12 +251,12 @@ var details;
 const select = document.getElementById('select');
 const moviedetails = document.getElementById('movieDet');
 
-var filmSelect = function(array) {
+var filmSelect = function (array) {
   array.map(element => {
     var opt = document.createElement('option');
     opt.value = element.imdbID;
     opt.innerHTML = element.Title;
-    select.appendChild(opt).innerHTML; 
+    select.appendChild(opt).innerHTML;
   });
 }
 
@@ -282,22 +282,20 @@ window.addEventListener('load', filmSelect(movies));
 /* ESERCIZIO 18 (EXTRA)
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
-const searching = document.getElementById('search').value;
+const searching = document.getElementById('search');
 const ricerca = document.getElementById('search');
 const filmTrovati = document.getElementById('filmTrovati');
 
-/*
-ricerca.addEventListener('click', function(movies, searching){
-  searching.value = '';
-  filmTrovati.innerHTML = '';
-array.forEach(element => {
-    if(element.Title.substring(searching)){
-        var document.createElement('li'),
 
-        filmTrovati.appendChild(li)
-    } else {
-        return string = 'EPICODE - ' + string
+ricerca.addEventListener('click', function () {
+  filmTrovati.innerHTML = '';
+  movies.forEach(element => {
+    if (element.Title.includes(searching.value) == true) {
+      var li = document.createElement('li');
+      li.innerHTML = element.Title;
+      filmTrovati.appendChild(li);
     }
-  }
+  })
+  searching.value = '';
 });
-*/
+
