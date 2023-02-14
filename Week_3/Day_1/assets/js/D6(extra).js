@@ -132,7 +132,7 @@ La funzione salta automaticamente i valori non numerici nell'array.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 var stringhe = ['farfalla', 'vino', 'birra', 'pirata', 'bicchiere'];
-var piuLunga = function(max){
+var piuLunga = function(){
     max = stringhe[0].length;
     var lunga = stringhe[0];
     stringhe.forEach(element => {
