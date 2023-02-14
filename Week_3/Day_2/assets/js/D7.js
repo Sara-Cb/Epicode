@@ -220,7 +220,7 @@ const movies = [
 function trovaFilmVecchio(movies) {
   let filmVecchio = movies[0];
   movies.forEach(function (movie) {
-    if (movie.releaseYear < filmVecchio.releaseYear) {
+    if (movie.Year < filmVecchio.Year) {
       filmVecchio = movie;
     }
   });
@@ -261,8 +261,16 @@ var filmSelect = function(array) {
 }
 
 select.addEventListener('change', (event) => {
-  moviedetails.innerHTML = `Il film selezionato ha codice ${event.target.value}`;
+  var selectedMovie;
+  movies.map(movie => {
+    if (movie.imdbID === event.target.value) {
+      selectedMovie = movie;
+    }
+  });
+  moviedetails.innerHTML = `Il film selezionato ha il codice ${selectedMovie.imdbID}. Anno di uscita: ${selectedMovie.Year}. <br><img src="${selectedMovie.Poster}">`;
 });
+
+
 
 window.addEventListener('load', filmSelect(movies));
 
@@ -280,6 +288,8 @@ const filmTrovati = document.getElementById('filmTrovati');
 
 /*
 ricerca.addEventListener('click', function(movies, searching){
+  searching.value = '';
+  filmTrovati.innerHTML = '';
 array.forEach(element => {
     if(element.Title.substring(searching)){
         var document.createElement('li'),
