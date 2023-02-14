@@ -224,9 +224,9 @@ function trovaFilmVecchio(movies) {
       filmVecchio = movie;
     }
   });
-  return filmVecchio;
+  return filmVecchio.Title + ', anno di uscita: ' + filmVecchio.Year;
 }
-console.log(trovaFilmVecchio(movies));
+console.log('Es. 12 - Il film più vecchio è: ' + trovaFilmVecchio(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
