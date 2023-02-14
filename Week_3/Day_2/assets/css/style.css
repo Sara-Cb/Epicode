@@ -13,5 +13,9 @@ html, body {
     margin: 0 auto;
     padding: 20px;
     color: bisque;
-    text-align: center;
+}
+
+#container p {
+    font-size: 1rem;
+    color: black;
 }

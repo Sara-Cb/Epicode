@@ -249,7 +249,7 @@ console.log(trovaFilmVecchio(movies));
 var last = movies.length;
 var details;
 const select = document.getElementById('select');
-const moviedetails = document.getElementById('moviedetails');
+const moviedetails = document.getElementById('movieDet');
 
 var filmSelect = function(array) {
   array.map(element => {
@@ -261,7 +261,7 @@ var filmSelect = function(array) {
 }
 
 select.addEventListener('change', (event) => {
-  moviedetails.innerHTML = `Il film selezionato ha il codice ${event.target.value}`;
+  moviedetails.innerHTML = `Il film selezionato ha codice ${event.target.value}`;
 });
 
 window.addEventListener('load', filmSelect(movies));
