@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html, body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     padding: 0;
     border: 0;
     font-family: 'Roboto', sans-serif;
+
 }
 
 #container{
     background: #6670ff;
+    width: 80%;
     margin: 0 auto;
-    padding: 30px;   
+    padding: 0px;   
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 #container h3, #container h1{
@@ -24,7 +30,8 @@ html, body {
 
 fieldset{
     display: flex;
-    width: 100%;
+    align-self: center;
+    width: 90%;
 }
 
 #newTask{
@@ -45,8 +52,10 @@ fieldset{
 #list{
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 10px;
     list-style: none;
+    width: 90%;
+    margin-bottom: 40px;
 }
 
 #list li{
