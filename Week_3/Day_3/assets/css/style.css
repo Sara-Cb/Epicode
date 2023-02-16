@@ -8,7 +8,7 @@ html, body {
     padding: 0;
     border: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url(https://cdn.pixabay.com/photo/2020/10/27/02/44/memo-5689344_1280.png);
+
 
 }
 
@@ -68,8 +68,8 @@ fieldset{
     cursor: pointer;
 }
 
-li.done {
-    background: grey;
+span.done {
+    background-color: red;
     color: #2c45a3;
     text-decoration: line-through;
 }

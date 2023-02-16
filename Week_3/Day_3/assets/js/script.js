@@ -8,7 +8,7 @@ addTask.addEventListener('click', function () {
     if (newTask.value == '') {
         return;
     } else {
-        li.innerHTML = newTask.value;
+        li.innerHTML = `<span>${newTask.value}</span>`;
         li.className = 'myTasks'
         delBtn.innerHTML = 'Delete Task';
         delBtn.className = 'delBtn';
@@ -16,9 +16,12 @@ addTask.addEventListener('click', function () {
         list.appendChild(li);
         li.appendChild(delBtn);
 
-        li.addEventListener('click', function() {
-            li.classList.toggle('done');
-        });
+        let span = document.querySelectorAll('li span');
+        for(let i =0; i<span.length; i++){
+            span[i].addEventListener('click', function() {
+                this.classList.toggle('done');
+            });
+        }
 
         delBtn.addEventListener('click', function () {
             list.removeChild(li);
@@ -27,5 +30,5 @@ addTask.addEventListener('click', function () {
     }
 
     newTask.value = '';
-    
+
 });
