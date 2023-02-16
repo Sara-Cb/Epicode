@@ -52,17 +52,17 @@
     /* ESERCIZIO 1
      Scrivi una funzione per cambiare il titolo del documento in qualcos'altro.
     */
+    var titolo = document.querySelector('h1');
 
     const changeTitle = function (newTitle) {
-      document.querySelector('.myClass').innerHTML = 'Nuovo titolo!!';
+      newTitle.innerHTML = 'Nuovo titolo!!';
     }
-    changeTitle()
+    changeTitle(titolo)
 
     /* ESERCIZIO 2
      Scrivi una funzione per cambiare la classe del titolo della pagina in "myHeading".
     */
 
-    var titolo = document.querySelector('.myClass');
     const addClassToTitle = function () {
       titolo.classList.replace('myClass', 'myHeading');
     }
@@ -71,41 +71,46 @@
     /* ESERCIZIO 3
      Scrivi una funzione per cambiare il contenuto di tutti i p che sono discendenti di un div.
     */
+    const para = document.querySelectorAll('div p');
 
-    const changePcontent = function () {
-      const div = document.querySelectorAll('div');
-      div.forEach(div => {
-        const para = div.querySelectorAll('p');
-        para.forEach(para => {
-          para.textContent = 'Nuovo testo!';
-        })
-      });
-    }
+    const changePcontent = function (testo) {
+      para.forEach(function (p) {
+        p.innerHTML = testo;
+      })
+    };
 
-    changePcontent();
+
+    changePcontent('Nuovo testo!');
 
     /* ESERCIZIO 4
      Scrivi una funzione per cambiare la proprietà href di ogni link a https://www.google.com
     */
+    const link = document.querySelectorAll('a');
 
-    const changeUrls = function () {
-      const link = document.querySelectorAll('a');
-      link.forEach(link => {
-        link.href = 'https://www.google.com';
+    const changeUrls = function (newUrl) {
+      link.forEach(a => {
+        a.href = newUrl;
+        a.target = '_blank'
       })
     }
 
-    changeUrls();
+    changeUrls('https://www.google.com');
 
     /* ESERCIZIO 5
      Scrivi una funzione per aggiungere un nuovo elemento alla seconda lista non-ordinata.
     */
+    var list2 = document.getElementById('secondList');
 
-    const addToTheSecond = function (content) {
-      document.getElementById('secondList').appendChild(document.createElement('li')).innerHTML = content;
+    const addToTheSecond = function (dove, cosa, content) {
+      var nuovoLi = (document.createElement(cosa));
+      dove.appendChild(nuovoLi).innerHTML = content;
     }
 
-    addToTheSecond('Nuovo punto in elenco!');
+    const div = document.querySelector('div');
+
+    addToTheSecond(list2, 'li', 'Nuovo punto in elenco!');
+
+
 
     /* ESERCIZIO 6
      Scrivi una funzione per aggiungere un secondo paragrafo al primo div.
@@ -126,47 +131,69 @@
      Scrivi una funzione per far scomparire la prima lista non-ordinata.
     */
     const list1 = document.getElementById('firstList');
-/*
-    const firstUlDisappear = function () {
-      list1.style.display === 'none' ? 'display' : 'none';
-    }
-      
-    list1.addEventListener('click', firstUlDisappear());
-    */
+    list1.style.cursor = 'pointer';
+    list1.style.visibility = 'visible';
 
-    const firstUlDisappear = function () {
-      var list1 = document.getElementById('firstList');
-      var parentDiv = list1.parentNode;
-      parentDiv.removeChild(list1);
+    const newbtn = document.createElement('button');
+    newbtn.innerText = 'Revelio';
+    newbtn.setAttribute('id', 'mybtn')
+    newbtn.style.visibility = 'hidden';
+    const addbtn = container.appendChild(newbtn);
+    const mybtn = document.getElementById('mybtn')
+
+
+    const firstUlDisappear = function (other) {
+      if (this.style.visibility == 'visible') {
+        this.style.visibility = 'hidden';
+        other.style.visibility = 'visible';
+      } else {
+        this.style.visibility = 'visible';
+        other.style.visibility = 'hidden';
+      }
     }
 
-    firstUlDisappear();
+
+    list1.addEventListener('click', function () {
+      firstUlDisappear.call(this, mybtn)
+    });
+
+
+    mybtn.addEventListener('click', function () {
+      firstUlDisappear.call(this, list1);
+    });
+
+
+
+
 
     /* ESERCIZIO 8
      Scrivi una funzione per rendere verde lo sfondo di ogni lista non-ordinata.
     */
-    var ul = document.querySelectorAll('ul');
+    var ulArray = document.querySelectorAll('ul');
 
-    const paintItGreen = function () {
-      ul.forEach(list =>{
-        list.style.backgroundColor = 'green';
-      }) 
+    const paintItGreen = function (dove, colore) {
+      dove.forEach(ul => {
+        ul.style.backgroundColor = colore;
+      })
     }
 
-    paintItGreen();
+    paintItGreen(ulArray, 'green');
 
     /* ESERCIZIO 9
      Rendi il tag h1 capace di cambiare colore del testo ogni volta che l'utente ci clicca sopra.
     */
-    /*
-    var titolo = document.getElementsByTagName('h1');
 
     const makeItClickable = function () {
-      titolo.style
-    }
+      titolo.style.cursor = "pointer";
+      titolo.addEventListener("click", function () {
+        var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        titolo.style.color = randomColor;
+      });
+    };
 
-    titolo.addEventListener('click', makeItClickable());
-    */
+
+    makeItClickable();
+
     /* ESERCIZIO 10
      Cambia il testo del footer con qualcos'altro quando l'utente ci clicca sopra.
     */
