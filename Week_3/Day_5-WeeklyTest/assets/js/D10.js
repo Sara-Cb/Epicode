@@ -46,6 +46,14 @@ divDom.appendChild(h2Dom);
 const ulDom = document.createElement('ul');
 divDom.appendChild(ulDom);
 
+//div per esercizi da 20 a 26
+const divExtra = document.createElement('div');
+container.appendChild(divExtra);
+const h2Extra = document.createElement('h2');
+h2Extra.innerHTML = 'Esercizi Avanzati'
+divExtra.appendChild(h2Extra);
+
+
 
 /*
 REGOLE
@@ -325,7 +333,7 @@ const fre = {
   job: 'Physiotherapist',
 };
 
-console.log(`Es. 11 pt1 - ${printObj(fre)}`);
+console.log(`Es. 11 pt.1 - ${printObj(fre)}`);
 divArr.appendChild(document.createElement('li')).innerHTML = `Es. 11 pt1 - ${printObj(fre)}`;
 
 
@@ -336,7 +344,7 @@ function deleteProp(obj, prop) {
 
 deleteProp(fre, 'job') //Fre's been fired from work!!
 
-console.log(`Es. 11 pt2 - ${printObj(fre)}`);
+console.log(`Es. 11 pt.2 - ${printObj(fre)}`);
 divArr.appendChild(document.createElement('li')).innerHTML = `Es. 11 pt2 - ${printObj(fre)}`;
 
 // Array di film
@@ -662,6 +670,8 @@ function removeIndex(index) {
 }
 removeIndex(3); //Lord of war
 console.log(movies)
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 19 - <b>In console</b>`;
+
 
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
@@ -671,6 +681,7 @@ console.log(movies)
 */
 
 //const container = document.getElementById('container'); 
+divDom.appendChild(document.createElement('li')).innerHTML = `Es. 20 - <b>Solo script</b>`;
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -720,6 +731,7 @@ function printTD() {
 }
 
 console.log('Es. 22 - ' + printTD());
+divDom.appendChild(document.createElement('li')).innerHTML = `Es. 22 - ${printTD()}`;
 
 
 /* ESERCIZIO 23
@@ -727,27 +739,24 @@ console.log('Es. 22 - ' + printTD());
 */
 
 
-(function turnRed (){
+function turnRed (){
   let aS = document.querySelectorAll('a');
   aS.forEach(link => {
     link.style.backgroundColor = 'red';
   })
-})()
+}
+
+divDom.appendChild(document.createElement('li')).innerHTML = `Es. 23 - <b>Solo script</b>`;
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-const divUL = document.createElement('div');
-const titEs24 = document.createElement('h3');
-titEs24.innerHTML = 'Esercizio 24'
+
 const myList = document.createElement('ul');
 myList.id = 'myList';
 const newLi = document.createElement('li');
-newLi.innerHTML = 'New li created <li> I can do more!';
-
-container.appendChild(divUL);
-divUL.appendChild(titEs24);
-divUL.appendChild(myList);
+newLi.innerHTML = 'Es 24 - New ul and li created!';
+divDom.appendChild(myList);
 myList.appendChild(newLi);
 
 
@@ -758,19 +767,26 @@ myList.appendChild(newLi);
 function clearList() {
   myList.innerHTML = '';
 };
+
+
 //clearList();
+divDom.appendChild(document.createElement('li')).innerHTML = `Es. 25 - <b>Solo script</b>`;
+
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-function testingTR(){
+(function testingTR(){
   const allTr = document.querySelectorAll('tr');
   allTr.forEach(tr => {
     tr.setAttribute('id', 'test')
   }
   )
-}
+})()
+
+divDom.appendChild(document.createElement('li')).innerHTML = `Es. 26 - <b>Solo script</b>`;
+
 
 // [EXTRA] JS Avanzato
 
@@ -797,8 +813,21 @@ function halfTree(height) {
   }
   return tree;
 }
+function halfTree2(height) {
+  let tree = '';
+  for (let i = 1; i <= height; i++) {
+    let row = '';
+    for (let j = 1; j <= i; j++) {
+      row += '*';
+    }
+    tree += row + '<br>';
+  }
+  return tree;
+}
 
 console.log(`Es. 27 \n${halfTree(4)}`)
+divExtra.appendChild(document.createElement('p')).innerHTML = `Es. 27 <br> ${halfTree2(4)}`;
+
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -811,7 +840,7 @@ console.log(`Es. 27 \n${halfTree(4)}`)
   *****
 
 */
-function tree(height) {
+function tree(height, blank) {
   let tree = '';
   let space = height - 1;
   let asterisks = 1;
@@ -824,18 +853,52 @@ function tree(height) {
     for (let k = 0; k < asterisks; k++) {
       row += '*';
     }
-    tree += row + '\n';
+    tree += row + blank;
     space--;
     asterisks += 2;
   }
   return tree;
 }
 
-console.log(`Es. 28 \n${tree(5)}`)
+
+
+console.log(`Es. 28 \n${tree(5, '/n')}`)
+const es28 = divExtra.appendChild(document.createElement('p'))
+es28.innerHTML = `Es. 28 <br> ${tree(5, '<br>')}`;
+es28.style.textAlign = 'center'
+
+
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+const titEs29 = document.createElement('h3');
+titEs29.innerHTML = 'Esercizio 29, è un numero primo?'
+const inputPrime = document.createElement('input');
+inputPrime.type = 'number';
+inputPrime.placeholder = 'Choose a number';
+const btnPrime = document.createElement('button');
+btnPrime.id = 'btnSearch';
+btnPrime.textContent = 'Verify';
+const resultPrime = document.createElement('p');
+resultPrime.id = 'result';
+
+divExtra.appendChild(titEs29);
+divExtra.appendChild(inputPrime);
+divExtra.appendChild(btnPrime);
+divExtra.appendChild(resultPrime);
+
+btnPrime.addEventListener("click", function () {
+  let numero = inputPrime.value;
+  if (numero == "") {
+    alert("Scrivi un numero!");
+    return;
+  } else {
+    resultPrime.innerHTML = isItPrime(numero);
+  }
+  inputPrime.value = '';
+});
 
 function isItPrime(num) {
   if (num <= 1) {
@@ -847,4 +910,6 @@ function isItPrime(num) {
     }
   }
   return `${num} è un numero primo!`;
-}
+};
+
+console.log(`Es. 29 - ${isItPrime(25)}`)
