@@ -27,50 +27,15 @@ divFunzioni.appendChild(h2Funzioni);
 const ulFunz = document.createElement('ul');
 divFunzioni.appendChild(ulFunz);
 
-// Creo un div con campo input e bottone (per es. 17)
-const divSearch = document.createElement('div');
-const titEs17 = document.createElement('h3');
-titEs17.innerHTML = 'Esercizio 17, cerca un film'
-const inputSearch = document.createElement('input');
-inputSearch.type = 'text';
-inputSearch.id = 'search-movie';
-inputSearch.placeholder = 'Search a movie';
-const btnSearch = document.createElement('button');
-btnSearch.id = 'btnSearch';
-btnSearch.textContent = 'Search';
-const listaFilm = document.createElement('ul');
-listaFilm.id = 'listaFilm';
+//div per esercizi da 11 a 19
+const divArr = document.createElement('div');
+container.appendChild(divArr);
+const h2Arr = document.createElement('h2');
+h2Arr.innerHTML = 'Esercizi su Arrays e Oggetti'
+divArr.appendChild(h2Arr);
+const ulArr = document.createElement('ul');
+divArr.appendChild(ulArr);
 
-// Aggiungo tutto
-container.appendChild(divSearch);
-divSearch.appendChild(titEs17);
-divSearch.appendChild(inputSearch);
-divSearch.appendChild(btnSearch);
-divSearch.appendChild(listaFilm);
-
-
-// Creo un div con campo input e bottone (per es. 18)
-const divMatch = document.createElement('div');
-const titEs18 = document.createElement('h3');
-titEs18.innerHTML = 'Esercizio 18, i film contengono la parola?'
-const inputMatch = document.createElement('input');
-inputMatch.type = 'text';
-inputMatch.id = 'match-movie';
-inputMatch.placeholder = 'Search a movie';
-const btnMatch = document.createElement('button');
-btnMatch.id = 'btnSearch';
-btnMatch.textContent = 'Search';
-const listaMatch = document.createElement('ul');
-listaMatch.id = 'listaMatch';
-const listaUNMatch = document.createElement('ul');
-listaUNMatch.id = 'listaUNMatch';
-
-container.appendChild(divMatch);
-divMatch.appendChild(titEs18);
-divMatch.appendChild(inputMatch);
-divMatch.appendChild(btnMatch);
-divMatch.appendChild(listaMatch);
-divMatch.appendChild(listaUNMatch);
 
 /*
 REGOLE
@@ -245,7 +210,6 @@ function onlyLetters(string) {
   return letters;
 }
 console.log('Es. 5 - ' + onlyLetters("I have 4 dogs and 6 cats."));
-
 divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 5 - ' + onlyLetters("I have 4 dogs and 6 cats.");
 
 /* ESERCIZIO 6
@@ -259,6 +223,7 @@ function isThisAnEmail(string) {
 }
 
 console.log('Es. 6 - ' + isThisAnEmail('this.is@an.email'));
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 6 - ' + isThisAnEmail('this.is@an.email');
 
 
 /* ESERCIZIO 7
@@ -271,6 +236,7 @@ function whatDayIsIt() {
 }
 
 console.log('Es. 7 - ' + whatDayIsIt());
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 7 - ' + whatDayIsIt();
 
 
 /* ESERCIZIO 8
@@ -299,6 +265,7 @@ function diceS (num) {
 }
 
 console.log('Es. 8 - ' + diceS(5));
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 8 - ' + diceS(5);
 
 
 /* ESERCIZIO 9
@@ -315,6 +282,7 @@ function howManyDays(date) {
 }
 
 console.log(`Es. 9 - I was born on ${birthday}, so I already lived ${howManyDays(myBD)} days`); //
+divFunzioni.appendChild(document.createElement('li')).innerHTML = `Es. 9 - I was born on ${birthday}, so I already lived ${howManyDays(myBD)} days`;
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -328,6 +296,7 @@ function isTodayMyBirthday(date) {
 }
 
 console.log(`Es. 10 - ${isTodayMyBirthday(myBD)}`); //
+divFunzioni.appendChild(document.createElement('li')).innerHTML = `Es. 10 - ${isTodayMyBirthday(myBD)}`;
 
 // Arrays & Oggetti
 console.info('Esercizi su Arrays e Oggetti JS');
@@ -559,6 +528,27 @@ console.log(`Es. 16 - ${sumAllTheYears(movies)}`);
 */
 // comincio a creare HTML così vedo anche le copertine!
 
+// Creo un div con campo input e bottone (per es. 17)
+const divSearch = document.createElement('div');
+const titEs17 = document.createElement('h3');
+titEs17.innerHTML = 'Esercizio 17, cerca un film'
+const inputSearch = document.createElement('input');
+inputSearch.type = 'text';
+inputSearch.id = 'search-movie';
+inputSearch.placeholder = 'Search a movie';
+const btnSearch = document.createElement('button');
+btnSearch.id = 'btnSearch';
+btnSearch.textContent = 'Search';
+const listaFilm = document.createElement('ul');
+listaFilm.id = 'listaFilm';
+
+// Aggiungo tutto
+divArr.appendChild(divSearch);
+divSearch.appendChild(titEs17);
+divSearch.appendChild(inputSearch);
+divSearch.appendChild(btnSearch);
+divSearch.appendChild(listaFilm);
+
 btnSearch.addEventListener("click", function () {
   let ricerca = inputSearch.value;
   if (ricerca == "") {
@@ -582,6 +572,28 @@ btnSearch.addEventListener("click", function () {
   "match" deve includere tutti i film dell'array "movies" fornito che contengono 
   la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+// Creo un div con campo input e bottone (per es. 18)
+const divMatch = document.createElement('div');
+const titEs18 = document.createElement('h3');
+titEs18.innerHTML = 'Esercizio 18, i film contengono la parola?'
+const inputMatch = document.createElement('input');
+inputMatch.type = 'text';
+inputMatch.id = 'match-movie';
+inputMatch.placeholder = 'Search a movie';
+const btnMatch = document.createElement('button');
+btnMatch.id = 'btnSearch';
+btnMatch.textContent = 'Search';
+const listaMatch = document.createElement('ul');
+listaMatch.id = 'listaMatch';
+const listaUNMatch = document.createElement('ul');
+listaUNMatch.id = 'listaUNMatch';
+
+divArr.appendChild(divMatch);
+divMatch.appendChild(titEs18);
+divMatch.appendChild(inputMatch);
+divMatch.appendChild(btnMatch);
+divMatch.appendChild(listaMatch);
+divMatch.appendChild(listaUNMatch);
 
 btnMatch.addEventListener("click", function () {
   let ricerca = inputMatch.value;
