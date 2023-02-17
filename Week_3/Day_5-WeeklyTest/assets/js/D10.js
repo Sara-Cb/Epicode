@@ -9,7 +9,6 @@ h1.innerHTML = 'Esercizi di JS';
 document.getElementsByTagName('body')[0].appendChild(container);
 container.appendChild(h1);
 
-
 //creo un div per esercizi da A a G
 const divBasic = document.createElement('div');
 container.appendChild(divBasic);
@@ -18,7 +17,16 @@ h2Basic.innerHTML = 'Esercizi Basic'
 divBasic.appendChild(h2Basic);
 const ulBasic = document.createElement('ul');
 divBasic.appendChild(ulBasic);
-const liBasic = document.createElement('li');
+var liBasic = document.createElement('li');
+
+//creo un div per esercizi da 1 a 10
+const divFunzioni = document.createElement('div');
+container.appendChild(divFunzioni);
+const h2Funzioni = document.createElement('h2');
+h2Funzioni.innerHTML = 'Esercizi Funzioni'
+divFunzioni.appendChild(h2Funzioni);
+const ulFunz = document.createElement('ul');
+divFunzioni.appendChild(ulFunz);
 
 // Creo un div con campo input e bottone (per es. 17)
 const divSearch = document.createElement('div');
@@ -89,7 +97,7 @@ function sum (n1, n2) {
   return n1 + n2;
 }
 console.log('Es. A - ' + sum(10, 20));
-
+divBasic.appendChild(liBasic).innerHTML = 'Es. A - ' + sum(10, 20);
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
@@ -100,6 +108,8 @@ function random () {
 }
 
 console.log('Es. B - ' + random());
+var liBasic2 = document.createElement('li');
+divBasic.appendChild(liBasic2).innerHTML = 'Es. B - ' + random();
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
@@ -121,6 +131,9 @@ function printObj (obj) {
 
 console.log('Es. C - ' + printObj(me));
 
+var liBasic3 = document.createElement('li');
+divBasic.appendChild(liBasic3).innerHTML = 'Es. C - ' + printObj(me);
+
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
@@ -128,6 +141,9 @@ console.log('Es. C - ' + printObj(me));
 delete me.age;
 
 console.log('Es. D - ' + printObj(me));
+
+var liBasic4 = document.createElement('li');
+divBasic.appendChild(liBasic4).innerHTML = 'Es. D - ' + printObj(me);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
@@ -137,6 +153,8 @@ var skills = ['Graphic Design', 'Web Development', 'Communication strategies'];
 me.skills = skills;
 
 console.log('Es. E - ' + printObj(me));
+var liBasic5 = document.createElement('li');
+divBasic.appendChild(liBasic5).innerHTML = 'Es. E - ' + printObj(me);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
@@ -145,6 +163,8 @@ console.log('Es. E - ' + printObj(me));
 me.skills.push('SM Management');
 
 console.log('Es. F - ' + printObj(me));
+var liBasic6 = document.createElement('li');
+divBasic.appendChild(liBasic6).innerHTML = 'Es. F - ' + printObj(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
@@ -153,6 +173,8 @@ console.log('Es. F - ' + printObj(me));
 me.skills.pop();
 
 console.log('Es. G - ' + printObj(me));
+var liBasic7 = document.createElement('li');
+divBasic.appendChild(liBasic7).innerHTML = 'Es. G - ' + printObj(me);
 
 // Funzioni
 console.info('Esercizi su funzioni JS');
@@ -166,6 +188,8 @@ function dice () {
 }
 
 console.log('Es. 1 - ' + dice());
+var liFunz1 = document.createElement('li');
+divFunzioni.appendChild(liFunz1).innerHTML = 'Es. 1 - ' + dice();
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -175,6 +199,8 @@ function whoIsBigger (num1, num2) {
 }
 
 console.log('Es. 2 - ' + whoIsBigger(5, 10));
+var liFunz2 = document.createElement('li');
+divFunzioni.appendChild(liFunz2).innerHTML = 'Es. 2 - ' + whoIsBigger(5, 10);
 
 
 /* ESERCIZIO 3
@@ -193,6 +219,8 @@ function splitMe (string) {
 }
 
 console.log('Es. 3 - ' + splitMe('Every word must be separeted from each other'));
+var liFunz3 = document.createElement('li');
+divFunzioni.appendChild(liFunz3).innerHTML = 'Es. 3 - ' + splitMe('Every word must be separeted from each other');
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
@@ -207,6 +235,8 @@ function deleteOne(string, boolean) {
   }
 }
 console.log('Es. 4 - ' + deleteOne("Hello", false));
+var liFunz4 = document.createElement('li');
+divFunzioni.appendChild(liFunz4).innerHTML = 'Es. 4 - ' + deleteOne("Hello", false);
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -228,6 +258,8 @@ function onlyLetters(string) {
   return letters;
 }
 console.log('Es. 5 - ' + onlyLetters("I have 4 dogs and 6 cats."));
+
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 5 - ' + onlyLetters("I have 4 dogs and 6 cats.");
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
