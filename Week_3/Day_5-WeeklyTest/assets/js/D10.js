@@ -3,7 +3,8 @@ const container = document.createElement('div');
 container.id = 'container';
 // Creo un bel titolo
 const h1 = document.createElement('h1');
-h1.innerHTML = 'Esercizi di JS';
+h1.innerHTML = 'Esercizi di JS, <br> anche in console';
+
 
 // Li inserisco
 document.getElementsByTagName('body')[0].appendChild(container);
@@ -669,11 +670,40 @@ console.log(movies)
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-//document.getElementById('container'); 
+//const container = document.getElementById('container'); 
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+divDom.appendChild(document.createElement('h3')).innerHTML = 'Es. 21'
+const table = document.createElement('table');
+divDom.appendChild(table)
+const headerRow = document.createElement('tr');
+const nameHeader = document.createElement('th');
+nameHeader.textContent = 'Nome';
+headerRow.appendChild(nameHeader);
+
+
+const surnameHeader = document.createElement('th');
+surnameHeader.textContent = 'Cognome';
+headerRow.appendChild(surnameHeader);
+table.appendChild(headerRow);
+
+const firstDataRow = document.createElement('tr');
+table.appendChild(firstDataRow);
+const firstNameCell = document.createElement('td');
+firstNameCell.textContent = 'Sara';
+firstDataRow.appendChild(firstNameCell);
+
+
+const surnameCell = document.createElement('td');
+surnameCell.textContent = 'CB';
+firstDataRow.appendChild(surnameCell);
+
+
+table.style.border = 'solid 1px white';
+
+
 
 const tdList = document.querySelectorAll('td'); //crea array con tutti eventuali td
 
@@ -682,10 +712,15 @@ const tdList = document.querySelectorAll('td'); //crea array con tutti eventuali
 */
 
 function printTD() {
+  const es22 = [];
   for (let i = 0; i < tdList.length; i++) {
-    console.log(tdList[i].textContent);
+    es22.push(tdList[i].textContent);
   }
+  return es22;
 }
+
+console.log('Es. 22 - ' + printTD());
+
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
