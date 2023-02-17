@@ -188,8 +188,7 @@ function dice () {
 }
 
 console.log('Es. 1 - ' + dice());
-var liFunz1 = document.createElement('li');
-divFunzioni.appendChild(liFunz1).innerHTML = 'Es. 1 - ' + dice();
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 1 - ' + dice();
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -199,8 +198,7 @@ function whoIsBigger (num1, num2) {
 }
 
 console.log('Es. 2 - ' + whoIsBigger(5, 10));
-var liFunz2 = document.createElement('li');
-divFunzioni.appendChild(liFunz2).innerHTML = 'Es. 2 - ' + whoIsBigger(5, 10);
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 2 - ' + whoIsBigger(5, 10);
 
 
 /* ESERCIZIO 3
@@ -219,8 +217,7 @@ function splitMe (string) {
 }
 
 console.log('Es. 3 - ' + splitMe('Every word must be separeted from each other'));
-var liFunz3 = document.createElement('li');
-divFunzioni.appendChild(liFunz3).innerHTML = 'Es. 3 - ' + splitMe('Every word must be separeted from each other');
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 3 - ' + splitMe('Every word must be separeted from each other');
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
@@ -235,8 +232,7 @@ function deleteOne(string, boolean) {
   }
 }
 console.log('Es. 4 - ' + deleteOne("Hello", false));
-var liFunz4 = document.createElement('li');
-divFunzioni.appendChild(liFunz4).innerHTML = 'Es. 4 - ' + deleteOne("Hello", false);
+divFunzioni.appendChild(document.createElement('li')).innerHTML = 'Es. 4 - ' + deleteOne("Hello", false);
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
