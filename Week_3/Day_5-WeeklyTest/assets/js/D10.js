@@ -17,7 +17,6 @@ h2Basic.innerHTML = 'Esercizi Basic'
 divBasic.appendChild(h2Basic);
 const ulBasic = document.createElement('ul');
 divBasic.appendChild(ulBasic);
-var liBasic = document.createElement('li');
 
 //creo un div per esercizi da 1 a 10
 const divFunzioni = document.createElement('div');
@@ -97,7 +96,7 @@ function sum (n1, n2) {
   return n1 + n2;
 }
 console.log('Es. A - ' + sum(10, 20));
-divBasic.appendChild(liBasic).innerHTML = 'Es. A - ' + sum(10, 20);
+divBasic.appendChild(document.createElement('li')).innerHTML = 'Es. A - ' + sum(10, 20);
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
@@ -108,8 +107,7 @@ function random () {
 }
 
 console.log('Es. B - ' + random());
-var liBasic2 = document.createElement('li');
-divBasic.appendChild(liBasic2).innerHTML = 'Es. B - ' + random();
+divBasic.appendChild(document.createElement('li')).innerHTML = 'Es. B - ' + random();
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
@@ -130,9 +128,7 @@ function printObj (obj) {
 }
 
 console.log('Es. C - ' + printObj(me));
-
-var liBasic3 = document.createElement('li');
-divBasic.appendChild(liBasic3).innerHTML = 'Es. C - ' + printObj(me);
+divBasic.appendChild(document.createElement('li')).innerHTML = 'Es. C - ' + printObj(me);
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
@@ -141,9 +137,7 @@ divBasic.appendChild(liBasic3).innerHTML = 'Es. C - ' + printObj(me);
 delete me.age;
 
 console.log('Es. D - ' + printObj(me));
-
-var liBasic4 = document.createElement('li');
-divBasic.appendChild(liBasic4).innerHTML = 'Es. D - ' + printObj(me);
+divBasic.appendChild(document.createElement('li')).innerHTML = 'Es. D - ' + printObj(me);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
@@ -153,8 +147,7 @@ var skills = ['Graphic Design', 'Web Development', 'Communication strategies'];
 me.skills = skills;
 
 console.log('Es. E - ' + printObj(me));
-var liBasic5 = document.createElement('li');
-divBasic.appendChild(liBasic5).innerHTML = 'Es. E - ' + printObj(me);
+divBasic.appendChild(document.createElement('li')).innerHTML = 'Es. E - ' + printObj(me);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
@@ -163,8 +156,7 @@ divBasic.appendChild(liBasic5).innerHTML = 'Es. E - ' + printObj(me);
 me.skills.push('SM Management');
 
 console.log('Es. F - ' + printObj(me));
-var liBasic6 = document.createElement('li');
-divBasic.appendChild(liBasic6).innerHTML = 'Es. F - ' + printObj(me);
+divBasic.appendChild(document.createElement('li')).innerHTML ='Es. F - ' + printObj(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
@@ -173,8 +165,7 @@ divBasic.appendChild(liBasic6).innerHTML = 'Es. F - ' + printObj(me);
 me.skills.pop();
 
 console.log('Es. G - ' + printObj(me));
-var liBasic7 = document.createElement('li');
-divBasic.appendChild(liBasic7).innerHTML = 'Es. G - ' + printObj(me);
+divBasic.appendChild(document.createElement('li')).innerHTML = 'Es. G - ' + printObj(me);
 
 // Funzioni
 console.info('Esercizi su funzioni JS');
