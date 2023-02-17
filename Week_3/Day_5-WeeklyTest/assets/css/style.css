@@ -4,6 +4,7 @@ html, body {
     margin: 0 auto;
     padding: 0 auto;
     background-color: forestgreen;
+    color: rgb(219, 230, 179)
 }
 
 #container {
@@ -16,8 +17,4 @@ html, body {
 #container h1, #container h2 {
     color: rgb(255, 255, 255);
     text-align: center;
-}
-
-#container h3 {
-color: rgb(255, 255, 255);
 }

@@ -36,6 +36,15 @@ divArr.appendChild(h2Arr);
 const ulArr = document.createElement('ul');
 divArr.appendChild(ulArr);
 
+//div per esercizi da 20 a 26
+const divDom = document.createElement('div');
+container.appendChild(divDom);
+const h2Dom = document.createElement('h2');
+h2Dom.innerHTML = 'Esercizi sul DOM'
+divDom.appendChild(h2Dom);
+const ulDom = document.createElement('ul');
+divDom.appendChild(ulDom);
+
 
 /*
 REGOLE
@@ -478,6 +487,7 @@ function countMovies(array) {
 }
 
 console.log(`Es. 13 - ${countMovies(movies)}`);
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 13 - ${countMovies(movies)}`;
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con 
@@ -493,6 +503,8 @@ function onlyTheYears(array){
 }
 
 console.log(`Es. 14 - ${onlyTheYears(movies)}`);
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 14 - ${onlyTheYears(movies)}`;
+
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
@@ -511,6 +523,8 @@ function onlyInLastMillennium(array) {
 }
 
 console.log(`Es. 15 - ${onlyInLastMillennium(movies)}`);
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 15 - ${onlyInLastMillennium(movies)}`;
+
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
@@ -526,6 +540,8 @@ function sumAllTheYears(array) {
 }
 
 console.log(`Es. 16 - ${sumAllTheYears(movies)}`);
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 16 - ${sumAllTheYears(movies)}`;
+
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
@@ -632,6 +648,7 @@ function searchAndDivide (ricerca){
 //console.log(`Es. 18 - ${searchAndDivide('Avengers')}`);
 
 
+
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro 
   e ritorna l'array "movies" 
@@ -644,6 +661,7 @@ function removeIndex(index) {
 }
 removeIndex(3); //Lord of war
 console.log(movies)
+
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
