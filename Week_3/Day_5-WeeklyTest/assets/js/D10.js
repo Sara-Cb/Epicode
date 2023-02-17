@@ -316,6 +316,8 @@ const fre = {
 };
 
 console.log(`Es. 11 pt1 - ${printObj(fre)}`);
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 11 pt1 - ${printObj(fre)}`;
+
 
 function deleteProp(obj, prop) {
   delete obj[prop];
@@ -325,8 +327,9 @@ function deleteProp(obj, prop) {
 deleteProp(fre, 'job') //Fre's been fired from work!!
 
 console.log(`Es. 11 pt2 - ${printObj(fre)}`);
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 11 pt2 - ${printObj(fre)}`;
 
-
+// Array di film
 const movies = [
   {
     Title: 'The Lord of the Rings: The Fellowship of the Ring',
@@ -463,6 +466,7 @@ function newestMovie(array) {
 }
 
 console.log(`Es. 12 - Most recent movie(s): ${newestMovie(movies)}`);
+divArr.appendChild(document.createElement('li')).innerHTML = `Es. 12 - Most recent movie(s): ${newestMovie(movies)}`;
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
