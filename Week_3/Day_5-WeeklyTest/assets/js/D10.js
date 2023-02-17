@@ -669,13 +669,13 @@ console.log(movies)
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-document.getElementById('container');
+//document.getElementById('container'); 
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-const tdList = document.querySelectorAll('td');; //crea array con tutti eventuali td
+const tdList = document.querySelectorAll('td'); //crea array con tutti eventuali td
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
