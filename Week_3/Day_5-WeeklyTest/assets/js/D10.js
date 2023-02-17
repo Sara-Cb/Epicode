@@ -551,9 +551,9 @@ const listaUNMatch = document.createElement('ul');
 listaUNMatch.id = 'listaUNMatch';
 
 container.appendChild(divMatch);
+divMatch.appendChild(titEs18);
 divMatch.appendChild(inputMatch);
 divMatch.appendChild(btnMatch);
-divMatch.appendChild(titEs18);
 divMatch.appendChild(listaMatch);
 divMatch.appendChild(listaUNMatch);
 
@@ -609,7 +609,7 @@ console.log(movies)
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-//creato e identificato sopra
+document.getElementById('container');
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -621,7 +621,12 @@ document.querySelectorAll('td'); //crea array con tutti eventuali td
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
-
+function printTD() {
+  const tdList = document.querySelectorAll('td');
+  for (let i = 0; i < tdList.length; i++) {
+    console.log(tdList[i].textContent);
+  }
+}
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -657,14 +662,21 @@ myList.appendChild(newLi);
 */
 
 function clearList() {
-  myList.removeChild(myList.childNodes);
+  myList.innerHTML = '';
 };
-clearList();
+//clearList();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+function testingTR(){
+  const allTr = document.querySelectorAll('tr');
+  allTr.forEach(tr => {
+    tr.setAttribute('id', 'test')
+  }
+  )
+}
 
 // [EXTRA] JS Avanzato
 
@@ -680,6 +692,20 @@ clearList();
 
 */
 
+function halfTree(height) {
+  let tree = '';
+  for (let i = 1; i <= height; i++) {
+    let row = '';
+    for (let j = 1; j <= i; j++) {
+      row += '*';
+    }
+    tree += row + '\n';
+  }
+  return tree;
+}
+
+console.log(`Es. 27 \n${halfTree(4)}`)
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -691,9 +717,40 @@ clearList();
   *****
 
 */
+function tree(height) {
+  let tree = '';
+  let space = height - 1;
+  let asterisks = 1;
+  
+  for (let i = 0; i < height; i++) {
+    let row = '';
+    for (let j = 0; j < space; j++) {
+      row += ' ';
+    }
+    for (let k = 0; k < asterisks; k++) {
+      row += '*';
+    }
+    tree += row + '\n';
+    space--;
+    asterisks += 2;
+  }
+  return tree;
+}
+
+console.log(`Es. 28 \n${tree(5)}`)
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
+function isItPrime(num) {
+  if (num <= 1) {
+    return `${num} non è un numero primo`;
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return `${num} non è un numero primo`;
+    }
+  }
+  return `${num} è un numero primo!`;
+}
