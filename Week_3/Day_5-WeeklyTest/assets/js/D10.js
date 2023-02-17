@@ -1,3 +1,70 @@
+// Creo il container
+const container = document.createElement('div');
+container.id = 'container';
+// Creo un bel titolo
+const h1 = document.createElement('h1');
+h1.innerHTML = 'Esercizi di JS';
+
+// Li inserisco
+document.getElementsByTagName('body')[0].appendChild(container);
+container.appendChild(h1);
+
+
+//creo un div per esercizi da A a G
+const divBasic = document.createElement('div');
+container.appendChild(divBasic);
+const h2Basic = document.createElement('h2');
+h2Basic.innerHTML = 'Esercizi Basic'
+divBasic.appendChild(h2Basic);
+const ulBasic = document.createElement('ul');
+divBasic.appendChild(ulBasic);
+const liBasic = document.createElement('li');
+
+// Creo un div con campo input e bottone (per es. 17)
+const divSearch = document.createElement('div');
+const titEs17 = document.createElement('h3');
+titEs17.innerHTML = 'Esercizio 17, cerca un film'
+const inputSearch = document.createElement('input');
+inputSearch.type = 'text';
+inputSearch.id = 'search-movie';
+inputSearch.placeholder = 'Search a movie';
+const btnSearch = document.createElement('button');
+btnSearch.id = 'btnSearch';
+btnSearch.textContent = 'Search';
+const listaFilm = document.createElement('ul');
+listaFilm.id = 'listaFilm';
+
+// Aggiungo tutto
+container.appendChild(divSearch);
+divSearch.appendChild(titEs17);
+divSearch.appendChild(inputSearch);
+divSearch.appendChild(btnSearch);
+divSearch.appendChild(listaFilm);
+
+
+// Creo un div con campo input e bottone (per es. 18)
+const divMatch = document.createElement('div');
+const titEs18 = document.createElement('h3');
+titEs18.innerHTML = 'Esercizio 18, i film contengono la parola?'
+const inputMatch = document.createElement('input');
+inputMatch.type = 'text';
+inputMatch.id = 'match-movie';
+inputMatch.placeholder = 'Search a movie';
+const btnMatch = document.createElement('button');
+btnMatch.id = 'btnSearch';
+btnMatch.textContent = 'Search';
+const listaMatch = document.createElement('ul');
+listaMatch.id = 'listaMatch';
+const listaUNMatch = document.createElement('ul');
+listaUNMatch.id = 'listaUNMatch';
+
+container.appendChild(divMatch);
+divMatch.appendChild(titEs18);
+divMatch.appendChild(inputMatch);
+divMatch.appendChild(btnMatch);
+divMatch.appendChild(listaMatch);
+divMatch.appendChild(listaUNMatch);
+
 /*
 REGOLE
 - Tutte le risposte devono essere scritte in JavaScript
@@ -22,6 +89,7 @@ function sum (n1, n2) {
   return n1 + n2;
 }
 console.log('Es. A - ' + sum(10, 20));
+
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
@@ -472,44 +540,6 @@ console.log(`Es. 16 - ${sumAllTheYears(movies)}`);
 */
 // comincio a creare HTML così vedo anche le copertine!
 
-// Creo il container
-const container = document.createElement('div');
-container.id = 'container';
-
-// Creo un bel titolo
-const h1 = document.createElement('h1');
-h1.innerHTML = 'Esercizi di JS';
-
-const h2 = document.createElement('h2');
-h2.innerHTML = 'Controlla la console per vederli tutti';
-
-// Creo un div con campo input e bottone
-const divSearch = document.createElement('div');
-const titEs17 = document.createElement('h3');
-titEs17.innerHTML = 'Esercizio 17, cerca un film'
-const inputSearch = document.createElement('input');
-inputSearch.type = 'text';
-inputSearch.id = 'search-movie';
-inputSearch.placeholder = 'Search a movie';
-const btnSearch = document.createElement('button');
-btnSearch.id = 'btnSearch';
-btnSearch.textContent = 'Search';
-const listaFilm = document.createElement('ul');
-listaFilm.id = 'listaFilm';
-
-
-// Aggiungo tutto al DOM
-document.getElementsByTagName('body')[0].appendChild(container);
-container.appendChild(h1);
-container.appendChild(h2);
-container.appendChild(divSearch);
-divSearch.appendChild(titEs17);
-divSearch.appendChild(inputSearch);
-divSearch.appendChild(btnSearch);
-divSearch.appendChild(listaFilm);
-
-
-
 btnSearch.addEventListener("click", function () {
   let ricerca = inputSearch.value;
   if (ricerca == "") {
@@ -533,29 +563,6 @@ btnSearch.addEventListener("click", function () {
   "match" deve includere tutti i film dell'array "movies" fornito che contengono 
   la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
-
-
-const divMatch = document.createElement('div');
-const titEs18 = document.createElement('h3');
-titEs18.innerHTML = 'Esercizio 18, i film contengono la parola?'
-const inputMatch = document.createElement('input');
-inputMatch.type = 'text';
-inputMatch.id = 'match-movie';
-inputMatch.placeholder = 'Search a movie';
-const btnMatch = document.createElement('button');
-btnMatch.id = 'btnSearch';
-btnMatch.textContent = 'Search';
-const listaMatch = document.createElement('ul');
-listaMatch.id = 'listaMatch';
-const listaUNMatch = document.createElement('ul');
-listaUNMatch.id = 'listaUNMatch';
-
-container.appendChild(divMatch);
-divMatch.appendChild(titEs18);
-divMatch.appendChild(inputMatch);
-divMatch.appendChild(btnMatch);
-divMatch.appendChild(listaMatch);
-divMatch.appendChild(listaUNMatch);
 
 btnMatch.addEventListener("click", function () {
   let ricerca = inputMatch.value;
