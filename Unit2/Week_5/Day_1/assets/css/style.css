@@ -227,7 +227,22 @@ footer a {
         display: inline;
         margin: 0px 5px;
     }
+    
+    article p:first-of-type::after {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 55px;
+        display: block;
+        width: 60px; 
+        height: 60px;
+        content:"";
+        margin-top: 20px;
+        padding: 5px;
+        border:rgba(5, 85, 103, 1) solid 1px;
+    }
 }
+
 
 /*media queries*/
 
@@ -277,13 +292,24 @@ footer a {
     }
 
     article table {
-        width: 60%;
+        width: 70%;
+        margin-bottom: 60px;
     }
 
     iframe, iframe+section  {
         width: 45%;
         margin: 0;
         border-radius: 20px;
+    }
+
+    section h2 {
+        background-color: #8e8e8e;
+        width: 100%;
+        align-self: center;
+    }
+
+    section input {
+        width: 70%;
     }
 
     aside {
