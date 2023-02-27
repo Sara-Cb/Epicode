@@ -239,7 +239,8 @@ footer a {
         content:"";
         margin-top: 20px;
         padding: 5px;
-        border:rgba(5, 85, 103, 1) solid 1px;
+        border:rgba(5, 85, 103, 1) solid 2px;
+        outline: rebeccapurple solid 2px;
     }
 }
 
