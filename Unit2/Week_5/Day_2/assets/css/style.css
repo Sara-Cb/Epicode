@@ -99,6 +99,7 @@ main {
   padding: 2em 1em;
   margin-bottom: 1.5em;
 }
+
 @media screen and (min-width: 700px) {
   main {
     padding: 2em;
@@ -113,6 +114,51 @@ h1 {
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
+}
+@media screen and (max-width:500px) {
+  h1 span img {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1 span {
+    display: block;
+    width: fit-content;
+    height: auto;
+    position: relative;
+  }
+
+  h1 span img {
+    opacity: 0.6;
+    width: 98%;
+    float: left;
+    position: absolute;
+    left: 1%;
+    bottom: -20%;
+  }
+}
+
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h1 span {
+    display: block;
+    width: fit-content;
+    height: auto;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  h1 span {
+    display: inline;
+  }
 }
 
 p,
@@ -142,10 +188,6 @@ h1 + p {
 }
 
 @media screen and (min-width: 500px) {
-  h1 {
-    font-size: 3rem;
-  }
-
   p,
   ul,
   ol {
@@ -155,12 +197,6 @@ h1 + p {
   h2 {
     font-size: 1.4rem;
     font-weight: 700;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  h1 {
-    font-size: 3.6rem;
   }
 }
 
@@ -357,11 +393,28 @@ aside div {
     margin-inline: -2px;
   }
 }
+
 aside div p:last-child {
   margin-bottom: 0;
   font-size: 0.8em;
   text-align: right;
 }
+
+@media screen and (min-width: 320px) {
+
+  aside div {
+    position: relative;
+  }
+ 
+  i.fa-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 60px;
+    opacity: 0.3;
+  }
+}
+
 
 /* FOOTER */
 footer {
@@ -393,6 +446,78 @@ footer a {
     margin-right: auto;
   }
 }
+
+#btnsDiv {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#btnsDiv, #btnsDiv a {
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+#btnsDiv button {
+  background-color: #efefefa1;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 3px 3px 5px 0px rgba(93, 93, 93, 0.65);
+  border-radius: 10%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px;
+}
+
+#btnsDiv .social {
+  color: #0049e6;
+}
+
+#btnsDiv .toTop {
+  color: #ff4fe8;
+}
+
+@media screen and (min-width: 320px) {
+  #btnsDiv {
+    position: fixed;
+    width: 70px;
+    right: 15px;
+    bottom: 5px;
+    text-align: right;
+    z-index: 2;
+  }
+
+  #btnsDiv button {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #btnsDiv div {
+    width: 70px;
+    position: fixed;
+    top: 230px;
+    right: 15px;
+  }  
+}
+
+@media screen and (min-width: 1200px) {
+  #btnsDiv div {
+    top: 110px;
+    right: 15px;
+  }  
+}
+
+
+
+
+
+
 
 @media print {
   body {
