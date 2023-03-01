@@ -124,6 +124,13 @@ button {
 }
 
 @media screen and (min-width: 576px) {
+
+    h1,
+    h2 {
+        margin-left: 2.5%;
+        text-align: left;
+    }
+
     header ul {
         flex-wrap: nowrap;
     }
@@ -139,6 +146,15 @@ button {
         padding: 20px 5px;
     }
 
+    #cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
 
-
+    .card {
+        width: 48%;
+    }
 }
