@@ -1,0 +1,46 @@
+html,
+body {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 237, 216);
+    color: rgb(59, 23, 0);
+}
+
+header,
+main,
+aside {
+    width: 95%;
+    background-color: rgb(252, 215, 170);
+    border-radius: 1em;
+    padding: 2%;
+}
+
+header ul {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    text-align: center;
+    font-weight: bold;
+}
+
+header img {
+    height: 1.5em;
+}
+
+header ul li:first-child {
+    font-size: 1.5em;
+}
+
+header ul li {
+    width: 45%;
+    list-style-type: none;
+    background-color: rgb(253, 201, 97);
+    border-radius: 1em;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
