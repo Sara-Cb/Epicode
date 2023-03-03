@@ -3,7 +3,7 @@ const hero = document.getElementById('hero');
 const btnHeader = document.querySelector('header button')
 
 window.addEventListener('scroll', function() {
-    if (window.scrollY > hero.offsetTop + hero.offsetHeight) {
+    if (window.scrollY > hero.offsetTop + hero.offsetHeight-75) {
       header.classList.add('white');
       btnHeader.classList.add('green');
     } else {

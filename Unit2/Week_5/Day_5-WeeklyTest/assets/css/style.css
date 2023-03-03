@@ -1,6 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/gt-super-ds-trial');
 
-html, body, main, body, #container{
+html,
+body,
+main,
+body,
+#container {
     width: 100%;
     max-width: 100vw;
     padding: 0;
@@ -17,13 +21,17 @@ html, body, main, body, #container{
     border-bottom: 1px solid rgb(90, 90, 90);
 }
 
-header, #hero, #trending, #twoColumns {
+header,
+#hero,
+#trending,
+#twoColumns {
     width: 100%;
     padding: 0% 5%;
     display: flex;
 }
 
-header, #hero {
+header,
+#hero {
     background-color: rgb(255, 192, 23);
     border-bottom: 1px solid rgb(41, 41, 41);
 }
@@ -72,21 +80,20 @@ header nav ul li a {
     color: rgb(41, 41, 41);
 }
 
-.start button{
+.start button {
     background-color: rgb(41, 41, 41);
     color: white;
     border: 0;
     border-radius: 2em;
     padding: 9px 16px;
     font-weight: 600;
-    transition: background-color 1s ease color 1s ease;
+    transition: background-color 1s ease, color 1s ease;
 }
 
 .start button.green {
     background-color: green;
     color: black;
 }
-
 
 #hero {
     justify-content: space-between;
@@ -105,6 +112,23 @@ header nav ul li a {
     height: 103%;
     margin-right: -6%;
 }
+
+#mmm path {
+    filter: blur(10px);
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
 
 h1 {
     font-size: 5em;
@@ -183,7 +207,7 @@ h1+p {
 }
 
 .data {
-    color:rgb(90, 90, 90);
+    color: rgb(90, 90, 90);
     display: flex;
     align-items: center;
 }
@@ -201,13 +225,15 @@ h1+p {
     margin-left: 10px;
 }
 
-.trendingArticle h4, .trendingArticle .data {
+.trendingArticle h4,
+.trendingArticle .data {
     height: 20%;
     width: 100%;
     font-size: 0.8em;
 }
 
-.trendingArticle h4, .news h4 {
+.trendingArticle h4,
+.news h4 {
     display: flex;
     align-items: center;
 }
@@ -280,7 +306,8 @@ h1+p {
     font-weight: bold;
 }
 
-.news h4, .news .data {
+.news h4,
+.news .data {
     width: 100%;
     font-size: 0.8em;
     height: 15%;
@@ -304,7 +331,8 @@ h1+p {
     font-size: 1.2em;
 }
 
-footer, aside {
+footer,
+aside {
     display: block;
     width: 100%;
 }
@@ -345,5 +373,3 @@ footer ul li {
     padding-left: 0;
     padding: 5px;
 }
-
-
