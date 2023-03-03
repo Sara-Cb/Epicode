@@ -74,10 +74,11 @@ header nav ul li a {
 
 #hero {
     justify-content: space-between;
+    overflow: hidden;
 }
 
 #hero div:first-child {
-    height: inherit;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -85,7 +86,8 @@ header nav ul li a {
 
 #mmm {
     width: 40%;
-    margin-right: -5%;
+    height: 103%;
+    margin-right: -6%;
 }
 
 h1 {
@@ -96,26 +98,39 @@ h1 {
 }
 
 h1+p {
+    font-size: 30px;
+}
+
+#hero button{
     font-size: 24px;
+    font-weight: 600;
+    width: 250px;
+    height: 50px;
 }
 
 #trending {
-    height: fit-content;
     margin: 25px;
     flex-direction: column;
     align-items: center;
 }
 
-#trendingArticles {
-    height: 100%;
-    flex-wrap: wrap;
+#trending h2 {
+    width: 100%;
+}
 
+#trendingArticles {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .trendingArticle {
     height: 45%;
     width: 30%;
     overflow: hidden;
+    display: flex;
+    align-content: start;
 }
 
-
+.trendingArticle .num {
+    font-size: 30px;
+}
