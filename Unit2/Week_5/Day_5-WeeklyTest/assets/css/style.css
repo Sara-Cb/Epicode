@@ -41,6 +41,10 @@ header {
     transition: background-color 0.5s ease;
 }
 
+header.white {
+    background-color: white;
+}
+
 #container {
     margin-top: 75px;
     background-color: white;
@@ -173,6 +177,21 @@ h1+p {
 
 .data {
     color:rgb(90, 90, 90);
+    display: flex;
+    align-items: center;
+}
+
+.about {
+    padding: 5px 8px;
+    margin-left: 3px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 2em;
+}
+
+.star {
+    height: 15px;
+    width: auto;
+    margin-left: 10px;
 }
 
 .trendingArticle h4, .trendingArticle .data {
