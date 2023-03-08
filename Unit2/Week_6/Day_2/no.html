@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sara_CB" />
+    <title>Veratour</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        header {
+            height: 100%;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #navbarContent {
+            text-align: right;
+        }
+
+        .card {
+            height: 450px;
+        }
+
+        .card-img-top img {
+            max-height: 150px;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <header class="vw-100 py-2 px-md-1 px-lg-3 mb-4 bg-body-tertiary">
+        <div class="row w-100 h-100 d-flex align-items-center m-0">
+            <div class="col-12 col-lg-9 d-flex justify-content-between align-items-center justify-content-lg-start">
+                <div class="h-100 me-2">
+                    <a class="navbar-brand" href="https://www.veratour.it/?tick=9be8ebb3" target="_blank">
+                        <img src="/assets/img/logo-veratour.svg" alt="Logo brand" style="height: 70px" />
+                    </a>
+                </div>
+                <nav class="navbar navbar-expand-md w-70 d-flex flex-column align-items-end">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sales">Saldi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#summer">Welcome Summer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#last">Last Minute</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#review">Recensioni</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col col-lg-3 d-none d-lg-block">
+                <form role="search" class="w-100 h-100 d-flex align-items-center">
+                    <input class="form-control me-2 w-75" type="search" placeholder="Cerca la tua destinazione"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-success d-inline w-20" type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="vw-100">
+        <div class="container d-flex flex-column align-items-center w-100 mx-md-1-auto mx-lg-3-auto">
+
+            <section id="home" class="w-100 bg-light text-center py-3 px-2 px-md-3 px-lg-4">
+                <div class="w-70 mx-5 border-bottom border-success">
+                    <h1>Veratour</h1>
+                </div>
+                <h3 class="m-3">Una storia di orgoglio e passione.</h3>
+                <p class="my-3">
+                    Ad oggi oltre cinque milioni di viaggiatori hanno scelto Veratour
+                    per vivere vacanze all'insegna dello stile “Made in Italy” e della
+                    più rigorosa ed efficiente organizzazione. Tratto distintivo del
+                    tour operator è la capacità di esportare il meglio del Made in Italy
+                    in tutti gli angoli del mondo. In ogni villaggio, infatti, le
+                    tradizioni locali si sposano con l'inconfondibile gusto italiano nei
+                    settori chiave della cucina, dell'assistenza e dell'animazione.
+                </p>
+                <a class="btn btn-success btn-lg px-5 fw-bold text-light" href="#daily" role="button">Prenota ora</a>
+            </section>
+
+            <section id="saldi" class="w-100 py-3 px-2 px-md-3 px-lg-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Saldi</h2>
+                    <button type="button" class="btn btn-sm btn-outline-info border-0 align-self-center mb-4"
+                        data-bs-toggle="collapse" data-bs-target="#collapseWeekDeal" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Nascondi/Mostra sezione
+                    </button>
+                </div>
+                <div class="row collapse show g-2 g-md-3 g-xl-5" id="collapseWeekDeal">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block">
+                        <div class="card border border-2 border-info">
+                            <div class="card-img-top w-100 h-35">
+                                <img src="https://agenti.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1217657/d-480.jpg&tick=6c912ee8"
+                                    alt="destinazione 1" />
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Ostuni</h3>
+                                <p class="card-text">
+                                    La Puglia: in grado di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                                    costa ionica del Salento, proprio a mezza via tra il divertimento di Gallipoli e la
+                                    magia silenziosa del "finibus terrae" di Leuca.
+                                </p>
+                                <button type="button" class="btn btn-success">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card border border-2 border-info">
+                            <img src="https://agenti.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1217657/d-680.jpg&tick=36c28a22"
+                                alt="destinazione 2" class="card-img-top" />
+                            <div class="card-body">
+                                <h3 class="card-title">Gallipoli</h3>
+                                <p class="card-text">
+                                    La Puglia: in grado di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                                    costa ionica del Salento, proprio a mezza via tra il divertimento di Gallipoli e la
+                                    magia silenziosa del "finibus terrae" di Leuca.
+                                </p>
+                                <button type="button" class="btn btn-success">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card border border-2 border-info">
+                            <img src="https://agenti.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1217657/d-510.jpg&tick=73926d35"
+                                alt="destinazione 3" class="card-img-top" />
+                            <div class="card-body">
+                                <h3 class="card-title">S. Maria di Leuca</h3>
+                                <p class="card-text">
+                                    La Puglia: in grado di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                                    costa ionica del Salento, proprio a mezza via tra il divertimento di Gallipoli e la
+                                    magia silenziosa del "finibus terrae" di Leuca.
+                                </p>
+                                <button type="button" class="btn btn-success">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block">
+                        <div class="card border border-2 border-info">
+                            <img src="https://agenti.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1217657/d-450.jpg&tick=6980c931"
+                                alt="destinazione 4" class="card-img-top" />
+                            <div class="card-body">
+                                <h3 class="card-title">Manfredonia</h3>
+                                <p class="card-text">
+                                    La Puglia: in grado di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                                    costa ionica del Salento, proprio a mezza via tra il divertimento di Gallipoli e la
+                                    magia silenziosa del "finibus terrae" di Leuca.
+                                </p>
+                                <button type="button" class="btn btn-success">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="wSummer">
+                <h2>Welcome Summer</h2>
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/b-110-1.jpg&tick=22010c6c"
+                                alt="destinazione 1" />
+                            <p>NEW</p>
+                        </div>
+                        <h3>Destinazione 1</h3>
+                        <p>
+                            La Puglia: una terra molto ospitale, ricca di tradizioni
+                            popolari, feste tipiche e specialità enogastronomiche in grado
+                            di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                            costa ionica del Salento, proprio a mezza via tra il
+                            divertimento di Gallipoli e la magia silenziosa del "finibus
+                            terrae" di Leuca.
+                        </p>
+                        <button type="button">Prenota</button>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/b-100-1.jpg&tick=493f2ed6"
+                                alt="destinazione 2" />
+                            <p>NEW</p>
+                        </div>
+                        <h3>Destinazione 2</h3>
+                        <p>
+                            La Puglia: una terra molto ospitale, ricca di tradizioni
+                            popolari, feste tipiche e specialità enogastronomiche in grado
+                            di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                            costa ionica del Salento, proprio a mezza via tra il
+                            divertimento di Gallipoli e la magia silenziosa del "finibus
+                            terrae" di Leuca.
+                        </p>
+                        <button type="button">Prenota</button>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/a-750-1.jpg&tick=14db1215"
+                                alt="destinazione 3" />
+                            <p>NEW</p>
+                        </div>
+                        <h3>Destinazione 3</h3>
+                        <p>
+                            La Puglia: una terra molto ospitale, ricca di tradizioni
+                            popolari, feste tipiche e specialità enogastronomiche in grado
+                            di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                            costa ionica del Salento, proprio a mezza via tra il
+                            divertimento di Gallipoli e la magia silenziosa del "finibus
+                            terrae" di Leuca.
+                        </p>
+                        <button type="button">Prenota</button>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/a-600-1.jpg&tick=295db713"
+                                alt="destinazione 4" />
+                            <p>NEW</p>
+                        </div>
+                        <h3>Destinazione 4</h3>
+                        <p>
+                            La Puglia: una terra molto ospitale, ricca di tradizioni
+                            popolari, feste tipiche e specialità enogastronomiche in grado
+                            di stregare gli occhi e il palato di qualunque visitatore. Sulla
+                            costa ionica del Salento, proprio a mezza via tra il
+                            divertimento di Gallipoli e la magia silenziosa del "finibus
+                            terrae" di Leuca.
+                        </p>
+                        <button type="button">Prenota</button>
+                        <div class="col">
+                            <div>
+                                <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/a-400-1.jpg&tick=423fa77d"
+                                    alt="destinazione 5" />
+                                <p>NEW</p>
+                            </div>
+                            <h3>Destinazione 5</h3>
+                            <p>
+                                La Puglia: una terra molto ospitale, ricca di tradizioni
+                                popolari, feste tipiche e specialità enogastronomiche in grado
+                                di stregare gli occhi e il palato di qualunque visitatore.
+                                Sulla costa ionica del Salento, proprio a mezza via tra il
+                                divertimento di Gallipoli e la magia silenziosa del "finibus
+                                terrae" di Leuca.
+                            </p>
+                            <button type="button">Prenota</button>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/a-300-1.jpg&tick=9efee2ee"
+                                    alt="destinazione 6" />
+                                <p>NEW</p>
+                            </div>
+                            <h3>Destinazione 6</h3>
+                            <p>
+                                La Puglia: una terra molto ospitale, ricca di tradizioni
+                                popolari, feste tipiche e specialità enogastronomiche in grado
+                                di stregare gli occhi e il palato di qualunque visitatore.
+                                Sulla costa ionica del Salento, proprio a mezza via tra il
+                                divertimento di Gallipoli e la magia silenziosa del "finibus
+                                terrae" di Leuca.
+                            </p>
+                            <button type="button">Prenota</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="daily">
+                <h2>Offerta del giorno</h2>
+                <div class="row">
+                    <div class="col">
+                        <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/a-100-1.jpg&tick=ba89e8dc"
+                            alt="Destinazione del giorno" />
+                    </div>
+                    <div class="col">
+                        <h3>Destinazione del giorno</h3>
+                        <h4>02/03/23 - 02/04/23</h4>
+                        <p>
+                            Ville a partire da <span class="prezzo">500€</span>, non fartele
+                            sfuggire!
+                        </p>
+                        <p>Best offer</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="lMinute">
+                <h2>Last Minute</h2>
+                <div class="row">
+                    <div class="col">
+                        <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/c-600-1.jpg&tick=f620d443"
+                            alt="Destinazione 1" />
+                    </div>
+                    <div class="col">
+                        <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/d-220-2.jpg&tick=28956992"
+                            alt="Destinazione 2" />
+                    </div>
+                    <div class="col">
+                        <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/c-600-1.jpg&tick=f620d443"
+                            alt="Destinazione 3" />
+                    </div>
+                    <div class="col">
+                        <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/d-220-2.jpg&tick=28956992"
+                            alt="Destinazione 4" />
+                    </div>
+                    <div class="col">
+                        <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/c-600-1.jpg&tick=f620d443"
+                            alt="Destinazione 5" />
+                    </div>
+                    <div class="col">
+                        <img src="https://www.veratour.it/share/img/img.cfm?src=opentur/VERATOUR/cms/1198158/d-220-2.jpg&tick=28956992"
+                            alt="Destinazione 6" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="recensioni">
+                <h2>Dicono di noi</h2>
+                <div class="row">
+                    <div class="col col-1">
+                        <img src="https://media.istockphoto.com/id/1395666412/vector/human-bust-silhouette-avatar-bust-shape-parallel-lines-human-chakra-aura-radiation-of-energy.jpg?s=612x612&w=0&k=20&c=s5W48bQuo1ScQE9NcqxNL09NrPQMucH9YxpuIyNDsdQ="
+                            alt="profile pic" />
+                    </div>
+                    <div class="col col-11">
+                        <h3>Nome 1</h3>
+                        <p>
+                            In filologia, la restituzione di un testo alla lezione che si
+                            presume esatta, attraverso l'esame della tradizione manoscritta;
+                            part., la scelta delle singole lezioni esatte tra le varianti
+                            messe in luce dalla collazione dei codici; concr., il testo che
+                            ne risulta: i poemi omerici secondo la r. (o nella r.) di
+                            Erodoto.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-1">
+                        <img src="https://media.istockphoto.com/id/1395666412/vector/human-bust-silhouette-avatar-bust-shape-parallel-lines-human-chakra-aura-radiation-of-energy.jpg?s=612x612&w=0&k=20&c=s5W48bQuo1ScQE9NcqxNL09NrPQMucH9YxpuIyNDsdQ="
+                            alt="profile pic" />
+                    </div>
+                    <div class="col col-11">
+                        <h3>Nome 1</h3>
+                        <p>
+                            In filologia, la restituzione di un testo alla lezione che si
+                            presume esatta, attraverso l'esame della tradizione manoscritta;
+                            part., la scelta delle singole lezioni esatte tra le varianti
+                            messe in luce dalla collazione dei codici; concr., il testo che
+                            ne risulta: i poemi omerici secondo la r. (o nella r.) di
+                            Erodoto.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-1">
+                        <img src="https://media.istockphoto.com/id/1395666412/vector/human-bust-silhouette-avatar-bust-shape-parallel-lines-human-chakra-aura-radiation-of-energy.jpg?s=612x612&w=0&k=20&c=s5W48bQuo1ScQE9NcqxNL09NrPQMucH9YxpuIyNDsdQ="
+                            alt="profile pic" />
+                    </div>
+                    <div class="col col-11">
+                        <h3>Nome 1</h3>
+                        <p>
+                            In filologia, la restituzione di un testo alla lezione che si
+                            presume esatta, attraverso l'esame della tradizione manoscritta;
+                            part., la scelta delle singole lezioni esatte tra le varianti
+                            messe in luce dalla collazione dei codici; concr., il testo che
+                            ne risulta: i poemi omerici secondo la r. (o nella r.) di
+                            Erodoto.
+                        </p>
+                    </div>
+                </div>
+            </section>
+    </main>
+    </div>
+
+    <footer id="contattaci">
+        <p>
+            © 2023 VERATOUR SPA con sede in Roma viale Eroi di Rodi 254 - C.F. P.IVA
+            03749251009; iscritta al registro Imprese di Roma al n. R.E.A 697042;
+            PEC: direzione@pec.veratour.it
+        </p>
+        <button type="button">Contattaci!</button>
+    </footer>
+
+
+    </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
