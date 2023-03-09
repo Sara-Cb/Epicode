@@ -1,0 +1,78 @@
+@import './partials/reset';
+@import './partials/variables';
+@import './partials/mixin';
+@import './partials/button';
+@import './partials/animation';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    @include totalWidth;
+    color: $textColor;
+    font-family: $mainFontFamily;
+    background-color: gray;
+    color: rgb(23, 23, 23);
+}
+
+main, header, .container {
+    width: 100%;
+}
+
+header, .container {
+    margin: 0 auto;
+    padding: 0 $md;
+    @include flexContainers;
+}
+
+a {
+    text-decoration: none;
+    color: $textColor;
+}
+
+nav {
+    width: 100%;
+    @include flexOrizz('flex-start');
+    @include spacings('block', $md, $md);
+}
+
+nav ul {
+    width: 40%;
+    @include horizontalUl;
+    @include spacings('inline', $md, $md);
+}
+
+nav ul li {
+    @include btnAll;
+}
+
+#logo {
+    width: 90px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+#hero{
+    background-color: $backgroundColor;
+    color: $textColor;
+    @include flexOrizz;
+}
+
+h1 {
+    @include titleBig;
+}
+
+h1, #hero p, #heroBtns {
+    @include spacings('block', $md, $md);
+}
+
+.yellowBtn {
+    @include coloredBtn($buttonYellow);
+}
+
+.greenBtn {
+    @include coloredBtn($buttonGreen);
+}
+
+.blueBtn {
+    @include coloredBtn($buttonBlue);
+}
+

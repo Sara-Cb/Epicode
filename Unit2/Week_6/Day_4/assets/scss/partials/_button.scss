@@ -1,0 +1,10 @@
+@mixin btnAll {
+    @include spacings('block', $sm, $sm);
+    border-radius: 2em;
+    border: 1px solid white;
+}
+
+@mixin coloredBtn($btnColor) {
+    @include btnAll;
+    background-color: $btnColor;
+};

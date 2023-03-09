@@ -1,0 +1,51 @@
+@mixin flexContainers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexOrizz($space: false) {
+    display: flex;
+    align-items: center;
+    @if ($space == false) {
+    justify-content: space-between;
+} @else {
+    justify-content: $space;
+}
+}
+
+@mixin totalWidth {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@mixin titleBig {
+    font-size: $fontSizeXL;
+    text-shadow: 2px 2px 2px transparentize($textColor, 0.6);
+    font-weight: bold;
+    color: lighten($textColor, 25%);
+}
+
+@mixin spacings ($spaceType, $marginSize, $paddingSize) {
+ @if ($spaceType == 'block') {
+    margin: $marginSize;
+    padding: $paddingSize;
+ } @if ($spaceType == 'inline') {
+    margin-inline: $marginSize;
+    padding: {
+        left: $paddingSize;
+        right: $paddingSize;
+        top: 0;
+        bottom: 0;
+    };
+ }
+}
+
+@mixin horizontalUl {
+    list-style: none;
+    @include flexOrizz;
+}
