@@ -1,4 +1,5 @@
 @import './partials/reset';
+@import './partials/mixin';
 @import './partials/variables';
 
 //fonts
@@ -13,12 +14,21 @@ html, body {
     font-family: 'Gotham', Arial, Helvetica, sans-serif;
     line-height: 1.2;
     background-color: $nxBlack;
-    color: $textColor;
+    color: $nxWhite;
 }
 
 header, main, footer {
     margin: 0;
     padding: 0;
+}
+
+header {
+    background-color: $nxBlack;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 @media screen and (max-width: 1200px) {
@@ -29,7 +39,7 @@ header, main, footer {
 
 h1, h2, h3{
     font-weight: 600;
-    color:  $textColor;
+    color:  $nxWhite;
 }
 
 #logo, #avatar {
@@ -98,11 +108,8 @@ h1 {
 }
 
 .card:hover > .card-body{
-    display: flex;
     min-height: 120px;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
+    @include mySpacingFlex(column, space-between);
 }
 
 .card-body {
@@ -110,10 +117,10 @@ h1 {
     padding: 10px 15px;
     position: absolute;
     background-color: $nxBlack;
-    color: $textColor;
+    color: $nxWhite;
     top: 110px;
     width: 100%;
-    border: 1px solid rgb($textColor, 0.3);
+    border: 1px solid rgb($nxWhite, 0.3);
     border-top: 0;
 
 }
@@ -142,7 +149,7 @@ h1 {
 }
 
 footer {
-    color: darken($textColor , 10%);
+    color: darken($nxWhite , 10%);
     font-size: 0.8em;
     font-weight: 300;
 }

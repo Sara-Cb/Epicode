@@ -58,6 +58,15 @@ header, main, footer {
   padding: 0;
 }
 
+header {
+  background-color: #141414;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
 @media screen and (max-width: 1200px) {
   header {
     font-size: 0.8em;
@@ -135,11 +144,11 @@ h1 {
 }
 
 .card:hover > .card-body {
-  display: flex;
   min-height: 120px;
+  display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .card-body {
