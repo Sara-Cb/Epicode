@@ -54,24 +54,18 @@ html, body {
 }
 
 header, main, footer {
-  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  right: 0;
   font-weight: 600;
 }
 
-header * {
-  color: #e6e6e6;
-}
-
-h1, h2, h3, header *:hover {
+h1, h2, h3 {
   font-weight: 600;
   color: white;
 }
@@ -120,7 +114,6 @@ h1 {
 .carouselCards {
   position: relative;
   overflow: visible;
-  box-shadow: 15px 0 40px -40px inset, -15px 0 40px -40px inset;
 }
 
 .controls {
