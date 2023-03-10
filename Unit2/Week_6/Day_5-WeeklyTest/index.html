@@ -25,19 +25,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="javascript:void(0)">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">TV Shows</a>
+                        <a class="nav-link" href="javascript:void(0)">TV Shows</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Movies</a>
+                        <a class="nav-link" href="javascript:void(0)">Movies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">New & Popular</a>
+                        <a class="nav-link" href="javascript:void(0)">New & Popular</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My List</a>
+                        <a class="nav-link" href="javascript:void(0)">My List</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
@@ -76,194 +76,1589 @@
 
     <main>
         <div class="container-fluid w-100 p-0">
-            <div class="container-fluid slider">
-                <section class="d-flex justify-content-between margin-right carouselTitle">
-                    <h2 class="text-white mb-3"> <b>Trending Now</b> </h2>
-                </section>
+            <div class="w-100 d-flex align-items-center justify-content-end p-3 pb-0">
+                <span class="p-1 border border-white mx-0"><i class="bi bi-text-left"></i></span>
+                <span class="p-1 border border-white mx-0"><i class="bi bi-grid"></i></span>
+            </div>
+            <div id="caroselli" class="m-0 p-0 w-100">
+                <div id="trendingNow" class="container-fluid slider mb-4">
 
-                <!--carosello intero + bnts prev e next-->
-                <div class="carousel slide pointer-event carouselContainer">
-                    <!--carosello intero-->
-                    <div class="carouselCards" data-bs-ride="carousel">
-                        <!--sezione di carosello-->
-                        <div class="carousel-item active carouselSection">
-                            <section class="d-flex">
-                                <!--card-->
-                                <div class="card mx-1 border-0">
-                                    <img src="./assets/imgs/media/media0.webp" class="card-img-top" alt="copertina">
-                                    <div class="card-body">
-                                        <section class="d-flex justify-content-between">
-                                            <div>
-                                                <i class="bi bi-play-circle-fill card-icon"></i>
-                                                <i class="bi bi-plus-circle card-icon"></i>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-arrow-down-circle card-icon"></i>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex align-items-center justify-content-between details">
-                                            <p class="card-text yourMatch m-0">97% match</p>
-                                            <p class="m-2 card-text text-white">Limited Series</p>
-                                            <span class="border card-text p-1 text-white">HD</span>
-                                        </section>
+                    <section class="d-flex justify-content-between ms-2 carouselTitle">
+                        <h2 class="text-white mb-3"> <b>Trending Now</b> </h2>
+                    </section>
 
-                                        <p class="card-text text-white adjectives">
-                                            <span class="btn btn-dark">Funny</span>
-                                            <span class="btn btn-dark">Rom-com</span>
-                                            <span class="btn btn-dark">Thriller</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--card-->
-                                <div class="card mx-1 border-0">
-                                    <img src="./assets/imgs/media/media1.jpg" class="card-img-top" alt="copertina">
-                                    <div class="card-body">
-                                        <section class="d-flex justify-content-between">
-                                            <div>
-                                                <i class="bi bi-play-circle-fill card-icon"></i>
-                                                <i class="bi bi-plus-circle card-icon"></i>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-arrow-down-circle card-icon"></i>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex align-items-center justify-content-between details">
-                                            <p class="card-text yourMatch m-0">97% match</p>
-                                            <p class="m-2 card-text text-white">Limited Series</p>
-                                            <span class="border card-text p-1 text-white">HD</span>
-                                        </section>
+                    <!--carosello intero + bnts prev e next-->
+                    <div class="carousel slide carouselContainer" id="carouselTrending">
+                        <!--carosello intero-->
+                        <div class="carousel-inner carouselCards">
+                            <!--sezione di carosello-->
+                            <div class="carousel-item active carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media0.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
 
-                                        <p class="card-text text-white adjectives">
-                                            <span class="btn btn-dark">Funny</span>
-                                            <span class="btn btn-dark">Rom-com</span>
-                                            <span class="btn btn-dark">Thriller</span>
-                                        </p>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--card-->
-                                <div class="card mx-1 border-0">
-                                    <img src="./assets/imgs/media/media2.webp" class="card-img-top" alt="copertina">
-                                    <div class="card-body">
-                                        <section class="d-flex justify-content-between">
-                                            <div>
-                                                <i class="bi bi-play-circle-fill card-icon"></i>
-                                                <i class="bi bi-plus-circle card-icon"></i>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-arrow-down-circle card-icon"></i>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex align-items-center justify-content-between details">
-                                            <p class="card-text yourMatch m-0">97% match</p>
-                                            <p class="m-2 card-text text-white">Limited Series</p>
-                                            <span class="border card-text p-1 text-white">HD</span>
-                                        </section>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media1.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
 
-                                        <p class="card-text text-white adjectives">
-                                            <span class="btn btn-dark">Funny</span>
-                                            <span class="btn btn-dark">Rom-com</span>
-                                            <span class="btn btn-dark">Thriller</span>
-                                        </p>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--card-->
-                                <div class="card mx-1 border-0">
-                                    <img src="./assets/imgs/media/media3.webp" class="card-img-top" alt="copertina">
-                                    <div class="card-body">
-                                        <section class="d-flex justify-content-between">
-                                            <div>
-                                                <i class="bi bi-play-circle-fill card-icon"></i>
-                                                <i class="bi bi-plus-circle card-icon"></i>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-arrow-down-circle card-icon"></i>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex align-items-center justify-content-between details">
-                                            <p class="card-text yourMatch m-0">97% match</p>
-                                            <p class="m-2 card-text text-white">Limited Series</p>
-                                            <span class="border card-text p-1 text-white">HD</span>
-                                        </section>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media2.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
 
-                                        <p class="card-text text-white adjectives">
-                                            <span class="btn btn-dark">Funny</span>
-                                            <span class="btn btn-dark">Rom-com</span>
-                                            <span class="btn btn-dark">Thriller</span>
-                                        </p>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--card-->
-                                <div class="card mx-1 border-0">
-                                    <img src="./assets/imgs/media/media4.jpg" class="card-img-top" alt="copertina">
-                                    <div class="card-body">
-                                        <section class="d-flex justify-content-between">
-                                            <div>
-                                                <i class="bi bi-play-circle-fill card-icon"></i>
-                                                <i class="bi bi-plus-circle card-icon"></i>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-arrow-down-circle card-icon"></i>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex align-items-center justify-content-between details">
-                                            <p class="card-text yourMatch m-0">97% match</p>
-                                            <p class="m-2 card-text text-white">Limited Series</p>
-                                            <span class="border card-text p-1 text-white">HD</span>
-                                        </section>
-                                        <p class="card-text text-white adjectives">
-                                            <span class="btn btn-dark">Funny</span>
-                                            <span class="btn btn-dark">Rom-com</span>
-                                            <span class="btn btn-dark">Thriller</span>
-                                        </p>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media3.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--card-->
-                                <div class="card mx-1 border-0">
-                                    <img src="./assets/imgs/media/media5.webp" class="card-img-top" alt="copertina">
-                                    <div class="card-body">
-                                        <section class="d-flex justify-content-between">
-                                            <div>
-                                                <i class="bi bi-play-circle-fill card-icon"></i>
-                                                <i class="bi bi-plus-circle card-icon"></i>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-arrow-down-circle card-icon"></i>
-                                            </div>
-                                        </section>
-                                        <section class="d-flex align-items-center justify-content-between details">
-                                            <p class="card-text yourMatch m-0">97% match</p>
-                                            <p class="m-2 card-text text-white">Limited Series</p>
-                                            <span class="border card-text p-1 text-white">HD</span>
-                                        </section>
-                                        <p class="card-text text-white adjectives">
-                                            <span class="btn btn-dark">Funny</span>
-                                            <span class="btn btn-dark">Rom-com</span>
-                                            <span class="btn btn-dark">Thriller</span>
-                                        </p>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media4.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            </section>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media5.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!--sezione di carosello-->
+                            <div class="carousel-item carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media7.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media8.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media9.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media10.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media11.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media12.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!--sezione di carosello-->
+                            <div class="carousel-item carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media6.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media13.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media14.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media15.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media16.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media17.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
+
+
+                        <button class="carousel-control-prev mx-2 controls" type="button"
+                            data-bs-target="#carouselTrending" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next mx-2 controls" type="button"
+                            data-bs-target="#carouselTrending" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
                     </div>
 
-                    <div class="controlsPrevNext">
-                        <button class="carousel-control-prev mx-1" type="button" data-bs-target="#carouselIndicators"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next mx-1" type="button" data-bs-target="#carouselIndicators"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                    </div>
                 </div>
 
+                <div id="watchAgain" class="container-fluid slider mb-4">
 
+                    <section class="d-flex justify-content-between margin-right carouselTitle">
+                        <h2 class="text-white mb-3"> <b>Watch it Again</b> </h2>
+                    </section>
+
+                    <!--carosello intero + bnts prev e next-->
+                    <div class="carousel slide carouselContainer" id="carouselAgain">
+                        <!--carosello intero-->
+                        <div class="carousel-inner carouselCards">
+                            <!--sezione di carosello-->
+                            <div class="carousel-item active carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media16.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media17.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media18.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media19.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media20.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media21.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!--sezione di carosello-->
+                            <div class="carousel-item carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media7.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media28.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media30.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media10.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media24.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media12.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!--sezione di carosello-->
+                            <div class="carousel-item carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media6.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media1.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media4.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media15.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media16.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media17.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+                        <button class="carousel-control-prev mx-2 controls" type="button"
+                            data-bs-target="#carouselAgain" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next mx-2 controls" type="button"
+                            data-bs-target="#carouselAgain" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div id="watchAgain" class="container-fluid slider mb-4">
+
+                    <section class="d-flex justify-content-between margin-right carouselTitle">
+                        <h2 class="text-white mb-3"> <b>New Releases</b> </h2>
+                    </section>
+
+                    <!--carosello intero + bnts prev e next-->
+                    <div class="carousel slide carouselContainer" id="carouselNew">
+                        <!--carosello intero-->
+                        <div class="carousel-inner carouselCards">
+                            <!--sezione di carosello-->
+                            <div class="carousel-item active carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media7.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media14.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media12.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media29.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media9.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media31.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!--sezione di carosello-->
+                            <div class="carousel-item carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media32.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media13.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media5.webp" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media6.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media24.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media12.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!--sezione di carosello-->
+                            <div class="carousel-item carouselSection">
+                                <section class="d-flex">
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media21.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media10.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media17.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media15.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media16.webp" class="card-img-top"
+                                            alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card mx-1 border-0">
+                                        <img src="./assets/imgs/media/media17.jpg" class="card-img-top" alt="copertina">
+                                        <div class="card-body">
+                                            <section class="d-flex justify-content-between">
+                                                <div>
+                                                    <i class="bi bi-play-circle-fill card-icon"></i>
+                                                    <i class="bi bi-plus-circle card-icon"></i>
+                                                </div>
+                                                <div>
+                                                    <i class="bi bi-arrow-down-circle card-icon"></i>
+                                                </div>
+                                            </section>
+                                            <section class="d-flex align-items-center justify-content-between details">
+                                                <p class="card-text yourMatch m-0">97% match</p>
+                                                <p class="m-2 card-text text-white">Limited Series</p>
+                                                <span class="border card-text p-1 text-white">HD</span>
+                                            </section>
+                                            <p class="card-text text-white adjectives">
+                                                <span class="btn btn-dark">Funny</span>
+                                                <span class="btn btn-dark">Rom-com</span>
+                                                <span class="btn btn-dark">Thriller</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+                        <button class="carousel-control-prev mx-2 controls" type="button" data-bs-target="#carouselNew"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next mx-2 controls" type="button" data-bs-target="#carouselNew"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+
+                </div>
             </div>
-
 
         </div>
     </main>
+
+    <footer class="w-100 d-flex justify-content-center align-items-center mt-5 pb-2 px-3">
+        <div class="container w-60 d-flex flex-column align-items-center mx-5 px-5">
+            <div>
+                <div class="socialIcons w-60">
+                    <a href="javascipt:void(0)" class="px-2"><i class="bi bi-facebook"></i></a>
+                    <a href="javascipt:void(0)" class="px-2"><i class="bi bi-instagram"></i></a>
+                    <a href="javascipt:void(0)" class="px-2"><i class="bi bi-twitter"></i></a>
+                    <a href="javascipt:void(0)" class="px-2"><i class="bi bi-youtube"></i></a>
+                </div>
+                <br>
+                <div class="row gx-5 my-4">
+                    <div class="col-3">
+                        <ul>
+                            <li><a href="javascript:void(0)">Audio</a></li>
+                            <li><a href="javascript:void(0)">Media</a></li>
+                            <li><a href="javascript:void(0)">Privacy</a></li>
+                            <li><a href="javascript:void(0)">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                            <li><a href="javascript:void(0)">Audio</a></li>
+                            <li><a href="javascript:void(0)">Investors</a></li>
+                            <li><a href="javascript:void(0)">Legal</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                            <li><a href="javascript:void(0)">Help center</a></li>
+                            <li><a href="javascript:void(0)">Jobs</a></li>
+                            <li><a href="javascript:void(0)">Cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                            <li><a href="javascript:void(0)">Audio</a></li>
+                            <li><a href="javascript:void(0)">Privacy</a></li>
+                            <li><a href="javascript:void(0)">Sara</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <p>
+                    <button type="button" class="btn btn-dark">Service Code</button> <br><br>
+                    @Copyright Netflics.
+                </p>
+            </div>
+        </div>
+    </footer>
 
 
 

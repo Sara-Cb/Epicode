@@ -60,6 +60,21 @@ header, main {
   padding: 0;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header * {
+  color: #e6e6e6;
+}
+
+header *:hover {
+  color: white;
+}
+
 #logo, #avatar {
   height: 60px;
 }
@@ -102,21 +117,8 @@ header, main {
   box-shadow: 15px 0 40px -40px inset, -15px 0 40px -40px inset;
 }
 
-.controlsPrevNext {
-  width: 98%;
-  height: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  z-index: -1;
-}
-
-.controlsPrevNext button {
-  height: inherit;
+.controls {
   width: auto;
-  position: static;
   z-index: 50;
 }
 
@@ -168,4 +170,18 @@ header, main {
   padding: 5px;
   margin: 2px;
   border-radius: 2em;
+}
+
+.socialIcons {
+  font-size: 2em;
+}
+
+footer {
+  color: #e6e6e6;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+footer ul {
+  list-style-type: none;
 }/*# sourceMappingURL=app.css.map */
