@@ -22,11 +22,10 @@ header, main, footer {
     padding: 0;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    font-weight: 600;
+@media screen and (max-width: 1200px) {
+    header{
+        font-size: 0.8em;
+    }
 }
 
 h1, h2, h3{
@@ -54,6 +53,10 @@ h1, h2, h3{
 .form-search button {
     position: relative;
     z-index: 2;
+}
+
+#tendinaUser .inside li:hover {
+    background-color: rgb(72, 72, 72) !important;
 }
 
 h1 {
