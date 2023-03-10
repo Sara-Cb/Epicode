@@ -156,8 +156,12 @@ footer ul {
     list-style-type: none;
 }
 
+.btn {
+    border-radius: 0;
+}
+
 .btn-dark {
     background-color: none;
     border: 1px solid white;
-    border-radius: 0;
 }
+
