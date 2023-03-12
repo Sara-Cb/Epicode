@@ -1,4 +1,5 @@
 @import './partials/reset';
+@import './partials/mixin';
 @import './partials/variables';
 
 //fonts
@@ -19,6 +20,15 @@ html, body {
 header, main, footer {
     margin: 0;
     padding: 0;
+}
+
+header {
+    background-color: $nxBlack;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 @media screen and (max-width: 1200px) {
