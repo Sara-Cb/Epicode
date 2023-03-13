@@ -5,10 +5,10 @@ const list = document.getElementById('list');
 addTask.addEventListener('click', function () {
     var li = document.createElement('li');
     var delBtn = document.createElement('button');
-    if (newTask.value == '') {
+    if (getPet.value == '') {
         return;
     } else {
-        li.innerHTML = `<span>${newTask.value}</span>`;
+        li.innerHTML = `<span>${getPet.value}</span>`;
         li.className = 'myTasks'
         delBtn.innerHTML = 'Delete Task';
         delBtn.className = 'delBtn';
@@ -29,6 +29,6 @@ addTask.addEventListener('click', function () {
 
     }
 
-    newTask.value = '';
+    getPet.value = '';
 
 });
