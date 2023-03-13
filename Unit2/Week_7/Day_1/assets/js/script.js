@@ -1,3 +1,4 @@
+//es.1
 class User {
     constructor(firstName, lastName, age, location) {
       this.firstName = firstName;
@@ -42,7 +43,7 @@ class User {
     
     // Aggiungo alla lista
     const li = document.createElement("li");
-    li.textContent = `${newUser.firstName} ${newUser.lastName}, ${newUser.age}) - from ${newUser.location}`;
+    li.textContent = `${newUser.firstName} ${newUser.lastName}, ${newUser.age} y/o, from ${newUser.location}`;
     userList.appendChild(li);
   
     // Aggiungo delete
@@ -68,11 +69,10 @@ class Pet {
       this.breed = breed;
     }
   
-    hasSameOwner(otherPet) {
+    sameOwner(otherPet) {
       return this.ownerName === otherPet.ownerName;
     }
   }
-
 
 const petForm = document.getElementById("pet-form");
 const petList = document.getElementById("list");
