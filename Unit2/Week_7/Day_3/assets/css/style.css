@@ -8,8 +8,19 @@ body {
     background-color: rgb(0, 133, 88);
     color: rgb(240, 255, 254);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
     text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: white;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .container,
@@ -32,11 +43,15 @@ body {
     width: 60%;
 }
 
+.col {
+    margin-bottom: 10px;
+}
+
 .card {
+    height: 100%;
     background-color: rgb(0, 133, 88);
     border-radius: 2em;
     padding: 0;
-    margin: 10px;
     overflow: hidden;
 }
 
@@ -48,6 +63,10 @@ body {
 
 .card-img-top {
     height: 100%;
+}
+
+.card-text {
+    color: rgb(169, 255, 228);
 }
 
 .btn {
