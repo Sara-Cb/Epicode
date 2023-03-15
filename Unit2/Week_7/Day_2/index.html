@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Sara_cb" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esercizio G2</title>
+  <title>Day 2 week 7</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
   <div class="container">
+    <h1>Day_2 Week_7</h1>
     <form id="userForm">
       <label for="name">
         <h3>Add Name</h3>
@@ -18,14 +20,16 @@
       <div class="btnDiv">
         <input type="submit" id="saveBtn" value="Save" />
         <input type="button" id="delBtn" value="Delete last" />
-        <input type="reset" id="resetBtn" value="reset" />
+        <input type="reset" id="resetBtn" value="reset" name="Reset" />
       </div>
     </form>
-    <h3>Users List</h3>
-    <ul id="userList"></ul>
-    <h3>Timer</h3>
+    <div class="userList">
+      <h3>Users List</h3>
+      <ul id="userList"></ul>
+    </div>
     <div class="timerDiv">
-      <h4 id="timer">&nbsp;</h4>
+      <h3>Timer</h3>
+      <h4 id="timer"></h4>
     </div>
   </div>
   <script src="./assets/js/script.js"></script>

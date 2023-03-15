@@ -1,7 +1,7 @@
 const listReference = document.getElementById("userList");
 const formReference = document.getElementById("userForm");
 const delBtn = document.getElementById("delBtn");
-const nameReference = document.getElementById("name").value;
+const nameReference = document.getElementById("name");
 const timer = document.getElementById("timer");
 let nameIndex = 0;
 
@@ -29,12 +29,12 @@ window.addEventListener("load", () => {
 
 formReference.addEventListener("submit", function (e) {
   e.preventDefault();
-  localStorage.setItem(`Name-${nameIndex}`, nameReference);
+  localStorage.setItem(`Name-${nameIndex}`, nameReference.value);
   let newLi = document.createElement("li");
   newLi.innerText = localStorage.getItem(`Name-${nameIndex}`);
   listReference.appendChild(newLi);
   nameIndex += 1;
-  nameReference = "";
+  nameReference.value = "";
 });
 
 formReference.addEventListener("reset", () => {
