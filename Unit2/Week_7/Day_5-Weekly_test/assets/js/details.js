@@ -44,9 +44,10 @@ let showDetail = async (id) => {
   }
 };
 
-searchDiv.addEventListener("submit", function () {
+searchDiv.addEventListener("submit", function (e) {
+  e.preventDefault();
   const searchedId = document.getElementById("searchField").value;
-  new URLSearchParams(window.location.search).set("_id", searchedId);
+  window.location.assign(`./details.html?_id=${searchedId}`);
   showDetail(searchedId);
 });
 
