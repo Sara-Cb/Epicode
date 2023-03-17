@@ -21,25 +21,6 @@ class Product {
   }
 }
 
-const addProduct = async function (newProd) {
-  try {
-    let response = await fetch(myEndpoint, {
-      method: "POST",
-      body: JSON.stringify(newProd),
-      headers: {
-        Authorization: myKey,
-      },
-    });
-    if (response.ok) {
-      alert("Prodotto aggiunto!");
-    } else {
-      alert("Problema nella creazione prodotto");
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 if (_id) {
   fetch(myEndpoint + _id, {
     headers: {
@@ -63,6 +44,8 @@ if (_id) {
       imgUrlReference.value = prodData.imageUrl;
       priceReference.value = prodData.price;
 
+      delBtn.classList.remove("d-none");
+      delBtn.addEventListener("click", deleteProduct);
       submitBtn.innerHTML = "Edit";
     })
     .catch((err) => {
@@ -111,3 +94,28 @@ formReference.addEventListener("submit", (e) => {
   console.log(newProduct);
   saveProduct(newProduct);
 });
+
+formReference.addEventListener("reset", (ev) => {
+  if (!window.confirm("Do you really want to reset values?")) {
+    ev.preventDefault();
+  }
+});
+
+let deleteProduct = async () => {
+  if (window.confirm("Deleting a product is irreversible. Are you sure?")) {
+    let response = await fetch(myEndpoint + _id, {
+      method: "DELETE",
+      headers: {
+        Authorization: myKey,
+      },
+    });
+    if (response.ok) {
+      alert("Product deleted correctly");
+      window.location = "./home.html";
+    } else {
+      alert("There was an error, product still here!");
+    }
+  } else {
+    window.location = "./home.html";
+  }
+};
