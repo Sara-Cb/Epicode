@@ -27,10 +27,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./home.html">Home</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Products</a>
-                        </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="./details.html">Product Details</a>
+                        </li>
+                        <li class="nav-item active">
                             <a class="nav-link" href="./backoffice.html">Backoffice</a>
                         </li>
                     </ul>
@@ -67,7 +67,10 @@
                         <label for="priceField">Product price</label>
                         <input type="number" id="priceField" required>
                     </div>
-                    <button type="submit" id="mySubmit">Submit</button>
+                    <div>
+                        <button type="submit" id="mySubmit">Submit</button>
+                        <button type="button" class="btn-danger d-none" id="delBtn">Delete</button>
+                    </div>
                 </form>
             </div>
 

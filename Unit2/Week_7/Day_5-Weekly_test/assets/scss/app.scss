@@ -118,3 +118,26 @@ nav .active > a {
   color: white;
   border: 1px solid black;
 }
+
+.hero {
+  width: 100%;
+  border: 2px solid darkcyan;
+}
+
+.hero h1 {
+  color: darkcyan;
+}
+
+.hero p {
+  width: 60%;
+}
+
+#productDetails {
+  font-size: 2.5em;
+}
+
+#productDetails > div:last-child {
+  height: inherit;
+  @include mySpacingFlex(column, space-between);
+  align-items: flex-start;
+}

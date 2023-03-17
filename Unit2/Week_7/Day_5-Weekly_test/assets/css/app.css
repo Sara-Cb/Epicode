@@ -171,4 +171,30 @@ nav .active > a {
   background-color: darkcyan;
   color: white;
   border: 1px solid black;
+}
+
+.hero {
+  width: 100%;
+  border: 2px solid darkcyan;
+}
+
+.hero h1 {
+  color: darkcyan;
+}
+
+.hero p {
+  width: 60%;
+}
+
+#productDetails {
+  font-size: 2.5em;
+}
+
+#productDetails > div:last-child {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
 }/*# sourceMappingURL=app.css.map */

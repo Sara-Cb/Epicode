@@ -8,6 +8,8 @@ const brandReference = document.getElementById("brandField");
 const imgUrlReference = document.getElementById("imgField");
 const priceReference = document.getElementById("priceField");
 const submitBtn = document.getElementById("mySubmit");
+const delBtn = document.getElementById("delBtn");
+const _id = new URLSearchParams(window.location.search).get("_id");
 
 class Product {
   constructor(name, description, brand, imageUrl, price) {
@@ -38,9 +40,6 @@ const addProduct = async function (newProd) {
   }
 };
 
-let _id = new URLSearchParams(window.location.search).get("_id");
-console.log("_id", _id);
-
 if (_id) {
   fetch(myEndpoint + _id, {
     headers: {
@@ -63,6 +62,8 @@ if (_id) {
       brandReference.value = prodData.brand;
       imgUrlReference.value = prodData.imageUrl;
       priceReference.value = prodData.price;
+
+      submitBtn.innerHTML = "Edit";
     })
     .catch((err) => {
       console.log(err);
@@ -82,6 +83,11 @@ const saveProduct = async function (newProd) {
       },
     });
     if (response.ok) {
+      nameReference.value = "";
+      decriptionReference.value = "";
+      brandReference.value = "";
+      imgUrlReference.value = "";
+      priceReference.value = "";
       alert("Prodotto salvato!");
     } else {
       alert("PROBLEMA salvataggio");
