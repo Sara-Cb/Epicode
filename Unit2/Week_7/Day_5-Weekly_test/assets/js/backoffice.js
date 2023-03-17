@@ -37,7 +37,6 @@ if (_id) {
     })
     .then((prodData) => {
       console.log(prodData);
-      // ripopolo i campi del form!
       nameReference.value = prodData.name;
       decriptionReference.value = prodData.description;
       brandReference.value = prodData.brand;
@@ -82,8 +81,6 @@ const saveProduct = async function (newProd) {
 
 formReference.addEventListener("submit", (e) => {
   e.preventDefault();
-  // vogliamo inviare alle API un nuovo evento da salvare
-  // raccolgo i dati del form:
   let newProduct = new Product(
     nameReference.value,
     decriptionReference.value,
