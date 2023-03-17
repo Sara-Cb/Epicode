@@ -1,0 +1,34 @@
+@mixin myCenteringFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mySpacingFlex($direction, $spacing) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $spacing;
+  align-items: center;
+}
+
+@mixin miniCont($margin, $padding, $height: false) {
+  @include myCenteringFlex;
+  width: 100%;
+  margin: $margin;
+  padding: $padding;
+  @if ($height == "false") {
+    height: auto;
+  }
+  height: $height;
+}
+
+@mixin zeroSpacing {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin spacing($margin, $padding) {
+  margin: 0;
+  padding: 0;
+}
