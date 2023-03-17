@@ -5,9 +5,9 @@ const _id = new URLSearchParams(window.location.search).get("_id");
 const detailDiv = document.getElementById("productDetails");
 const searchDiv = document.getElementById("searchDiv");
 
-let showDetail = async (cosa) => {
+let showDetail = async (id) => {
   try {
-    let response = await fetch(myEndpoint + cosa, {
+    let response = await fetch(myEndpoint + id, {
       method: "GET",
       headers: {
         Authorization: myKey,

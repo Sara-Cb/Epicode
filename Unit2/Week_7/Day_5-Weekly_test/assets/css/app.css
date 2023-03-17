@@ -141,7 +141,7 @@ nav .active > a {
 }
 
 .card:hover {
-  transform: scaleX(1.4) scaleY(1.4);
+  transform: scaleX(1.2) scaleY(1.2);
   z-index: 10;
   transition: 0.5s ease;
   cursor: pointer;
@@ -186,8 +186,18 @@ nav .active > a {
   width: 60%;
 }
 
+#detBody {
+  max-height: 100vh;
+  height: 100%;
+}
+
 #productDetails {
-  font-size: 2.5em;
+  font-size: 2em;
+}
+
+#productDetails .detID {
+  font-size: 0.8em;
+  color: grey;
 }
 
 #productDetails > div:last-child {

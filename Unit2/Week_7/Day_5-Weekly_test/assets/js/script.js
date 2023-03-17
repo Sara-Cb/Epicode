@@ -33,9 +33,11 @@ const createCards = (products) => {
         <p class='cardDescription'>${product.description}</p>
     </div>
     <div>
-        <p class='cardPrice w-100'>Price: ${product.price}€</p>
+        <p class='cardPrice w-100 mb-2'>Price: ${product.price}€</p>
+    <div class='d-flex justify-content-between '>
         <a href="./details.html?_id=${product._id}" id="detailsBtn" class="btn">Details</a>
         <a href="./backoffice.html?_id=${product._id}" id="editBtn" class="btn">Edit</a>
+    </div>
     </div>`;
 
     newCard.appendChild(cardImg);
