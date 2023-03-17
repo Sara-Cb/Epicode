@@ -96,7 +96,7 @@ formReference.addEventListener("submit", (e) => {
 });
 
 formReference.addEventListener("reset", (ev) => {
-  if (!window.confirm("Do you really want to reset values?")) {
+  if (!window.confirm("This action will empty the form, are you sure?")) {
     ev.preventDefault();
   }
 });
