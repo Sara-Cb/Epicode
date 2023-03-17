@@ -24,34 +24,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
                             <a class="nav-link" href="#">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
+                            <a class="nav-link" href="./backoffice.html">Backoffice</a>
                         </li>
                     </ul>
-                </div>
-                <div class="secondContainer d-none d-lg-block">
-                    <form class="form-inline minicontainer">
-                        <input class="form-control mr-sm-2 d-inline" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
                 </div>
             </nav>
         </div>
@@ -60,28 +42,44 @@
     <main>
         <div class="container">
             <div>
-                <h1 class="text-center">Products</h1>
+                <h1 class="text-center">Create or edit products</h1>
             </div>
 
-            <div id="bestSellers" class="row">
-                <div class="col-12">
-                    <h3>Best Sellers</h3>
-                </div>
-
+            <div class="centering">
+                <form id="myForm">
+                    <div>
+                        <label for="nameField">Product name</label>
+                        <input type="text" id="nameField" required>
+                    </div>
+                    <div>
+                        <label for="descriptionField">Product description</label>
+                        <input type="text" id="descriptionField" required>
+                    </div>
+                    <div>
+                        <label for="brandField">Product brand</label>
+                        <input type="text" id="brandField" required>
+                    </div>
+                    <div>
+                        <label for="imgField">Product image URL</label>
+                        <input type="text" id="imgField" required>
+                    </div>
+                    <div>
+                        <label for="priceField">Product price</label>
+                        <input type="number" id="priceField" required>
+                    </div>
+                    <button type="submit" id="mySubmit">Submit</button>
+                </form>
             </div>
+
         </div>
     </main>
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script> <!--mio script-->
+    <script src="assets/js/backoffice.js"></script> <!--mio script-->
 </body>
 
 </html>

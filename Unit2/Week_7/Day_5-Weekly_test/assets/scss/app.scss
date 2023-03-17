@@ -47,6 +47,26 @@ nav,
   @include mySpacingFlex(row, space-between);
 }
 
+nav .active > a {
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.centering {
+  width: 100%;
+  @include myCenteringFlex;
+}
+
+#myForm {
+  @include mySpacingFlex(column, space-between);
+  height: 400px;
+  width: max-content;
+  margin-top: 40px;
+}
+#myForm input {
+  display: block;
+}
+
 /*
 .card, .card img {
     border-radius: 0;
