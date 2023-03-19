@@ -1,6 +1,9 @@
 @import "./partials/reset";
 @import "./partials/mixin";
 @import "./partials/variables";
+@import "./partials/home";
+@import "./partials/details";
+@import "./partials/backoffice";
 
 //fonts
 @import url("https://fonts.cdnfonts.com/css/gotham");
@@ -12,6 +15,7 @@ body {
   height: 100%;
   font-family: "Gotham", Arial, Helvetica, sans-serif;
   line-height: 1.2;
+  @include colorCombo("light", $mywhite);
 }
 
 header,
@@ -30,10 +34,15 @@ h1,
 h2,
 h3 {
   font-weight: 600;
+  color: $mygreen;
 }
 
 h1 {
   font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 nav,
@@ -41,6 +50,10 @@ nav,
   width: 100%;
   @include mySpacingFlex(row, space-between !important);
   padding: 1% 2%;
+  @include colorCombo("darkGreen", $mywhite);
+  * {
+    color: $mygreen;
+  }
 }
 
 .minicontainer {
@@ -49,110 +62,15 @@ nav,
 
 nav .active > a {
   font-weight: bold !important;
-  color: white !important;
+  color: lighten($mygreen, 20%) !important;
+}
+
+nav a:hover,
+nav li:hover {
+  color: lighten($mygreen, 20%) !important;
 }
 
 .centering {
   width: 100%;
   @include myCenteringFlex;
-}
-
-#myForm {
-  @include mySpacingFlex(column, space-between);
-  height: 400px;
-  width: max-content;
-  margin-top: 40px;
-}
-#myForm input {
-  display: block;
-}
-
-.card {
-  height: 100%;
-  min-height: 400px;
-  border-radius: 2em;
-  padding: 0;
-  overflow: hidden;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 40%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-}
-
-.card-img-top img {
-  width: 100%;
-}
-
-.card:hover {
-  transform: scaleX(1.2) scaleY(1.2);
-  z-index: 10;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-
-.card-body {
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-between;
-}
-
-.cardPrice {
-  font-size: 1.2em;
-  color: darkcyan;
-  text-align: center;
-  padding: 5px;
-  border: 1px solid darkcyan;
-}
-
-.card .details p {
-  font-size: 0.7em;
-}
-
-.btn {
-  background-color: darkcyan;
-  color: white;
-  border: 1px solid black;
-}
-
-.hero {
-  width: 100%;
-  border: 2px solid darkcyan;
-}
-
-.hero h1 {
-  color: darkcyan;
-}
-
-.hero p {
-  width: 60%;
-}
-
-#detBody {
-  max-height: 100vh;
-  height: 100%;
-}
-
-#detBody main {
-  height: 80%;
-  justify-content: flex-start;
-}
-
-#productDetails {
-  font-size: 2em;
-}
-
-#productDetails .detID {
-  font-size: 0.8em;
-  color: grey;
-}
-
-#productDetails > div:last-child {
-  height: inherit;
-  @include mySpacingFlex(column, space-between);
-  align-items: flex-start;
 }

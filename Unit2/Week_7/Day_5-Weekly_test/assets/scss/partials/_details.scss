@@ -1,0 +1,24 @@
+#detBody {
+  max-height: 100vh;
+  height: 100%;
+}
+
+#detBody main {
+  height: 80%;
+  justify-content: flex-start;
+}
+
+#productDetails {
+  font-size: 2em;
+}
+
+#productDetails .detID {
+  font-size: 0.8em;
+  color: grey;
+}
+
+#productDetails > div:last-child {
+  height: inherit;
+  @include mySpacingFlex(column, space-between);
+  align-items: flex-start;
+}

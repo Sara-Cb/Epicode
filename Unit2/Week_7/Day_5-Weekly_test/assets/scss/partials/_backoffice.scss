@@ -1,0 +1,10 @@
+#myForm {
+  @include mySpacingFlex(column, space-between);
+  height: 400px;
+  width: max-content;
+  margin-top: 40px;
+}
+
+#myForm input {
+  display: block;
+}

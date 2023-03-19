@@ -32,3 +32,30 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin colorCombo($combination, $white) {
+  @if ($combination == "dark") {
+    background-color: $myblack;
+    color: $mywhite;
+  }
+  @if ($combination == "light") {
+    background-color: $white;
+    color: $myblack;
+  }
+  @if ($combination == "darkGreen") {
+    background-color: $myblack;
+    color: $mygreen;
+  }
+  @if ($combination == "lightGreen") {
+    background-color: $white;
+    color: $mygreen;
+  }
+  @if ($combination == "greenDark") {
+    background-color: $mygreen;
+    color: $myblack;
+  }
+  @if ($combination == "greenLight") {
+    background-color: $mygreen;
+    color: $mywhite;
+  }
+}
