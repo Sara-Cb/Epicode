@@ -12,7 +12,7 @@ const createCards = (products) => {
   rowReference.innerHTML = ``;
   products.forEach((product, index) => {
     const newCol = document.createElement("div");
-    newCol.setAttribute("class", "col-6 col-md-3 col-xl-2");
+    newCol.setAttribute("class", "col-12 col-sm-6 col-md-4 col-xl-3 mb-2");
     newCol.setAttribute("id", index);
 
     const newCard = document.createElement("div");

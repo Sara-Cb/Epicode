@@ -17,7 +17,7 @@
     <header>
         <div class="container">
             <nav class="navbar fixed-top navbar-expand-lg">
-                <a class="navbar-brand" href="./home.html">Sarazon</a>
+                <a class="navbar-brand" href="./home.html"><img src="assets/img/sarazon_logo.png" alt="sarazon"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
 
     <main>
         <div class="container">
-            <h1>Product Details</h1>
+            <h1 id="detTitle">Product Details</h1>
             <div id="searchDiv">
                 <form class="input-group rounded">
                     <input id="searchField" type="search" class="form-control rounded" placeholder="Search product ID"
@@ -51,10 +51,13 @@
                 </form>
             </div>
 
-            <div class="d-flex flex-column align-items-center">
-                <div id="productDetails" class="row">
+            <div id="productsDiv">
+                <h2 class="mt-4 mb-3">Products</h2>
+                <div id="loadingSpin" class="spinner-border" role="status"></div>
+                <div id="rowReference" class="row"></div>
+            </div>
 
-                </div>
+            <div id="productDetails" class="row row-cols-1 row-cols-md-2">
             </div>
         </div>
     </main>

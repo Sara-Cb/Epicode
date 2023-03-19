@@ -10,6 +10,7 @@ const priceReference = document.getElementById("priceField");
 const submitBtn = document.getElementById("mySubmit");
 const delBtn = document.getElementById("delBtn");
 const _id = new URLSearchParams(window.location.search).get("_id");
+const editTitle = document.getElementById("editTitle");
 
 class Product {
   constructor(name, description, brand, imageUrl, price) {
@@ -21,36 +22,38 @@ class Product {
   }
 }
 
-if (_id) {
-  fetch(myEndpoint + _id, {
-    headers: {
-      Authorization: myKey,
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        return new Error("Error!");
-      }
+const setPage = function () {
+  if (_id) {
+    fetch(myEndpoint + _id, {
+      headers: {
+        Authorization: myKey,
+        "Content-Type": "application/json",
+      },
     })
-    .then((prodData) => {
-      console.log(prodData);
-      nameReference.value = prodData.name;
-      decriptionReference.value = prodData.description;
-      brandReference.value = prodData.brand;
-      imgUrlReference.value = prodData.imageUrl;
-      priceReference.value = prodData.price;
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return new Error("Error!");
+        }
+      })
+      .then((prodData) => {
+        editTitle.innerHTML = "Edit product";
+        nameReference.value = prodData.name;
+        decriptionReference.value = prodData.description;
+        brandReference.value = prodData.brand;
+        imgUrlReference.value = prodData.imageUrl;
+        priceReference.value = prodData.price;
 
-      delBtn.classList.remove("d-none");
-      delBtn.addEventListener("click", deleteProduct);
-      submitBtn.innerHTML = "Edit";
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}
+        delBtn.classList.remove("d-none");
+        delBtn.addEventListener("click", deleteProduct);
+        submitBtn.innerHTML = "Edit";
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+};
 
 const saveProduct = async function (newProd) {
   try {
@@ -116,3 +119,5 @@ let deleteProduct = async () => {
     window.location = "./home.html";
   }
 };
+
+window.addEventListener("load", setPage);

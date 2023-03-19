@@ -1,24 +1,30 @@
-#detBody {
-  max-height: 100vh;
-  height: 100%;
-}
-
 #detBody main {
   height: 80%;
   justify-content: flex-start;
 }
 
-#productDetails {
-  font-size: 2em;
+#detBody .container {
+  height: 100%;
 }
 
-#productDetails .detID {
-  font-size: 0.8em;
-  color: grey;
+#productDetails {
+  font-size: 1.2em;
 }
 
 #productDetails > div:last-child {
   height: inherit;
   @include mySpacingFlex(column, space-between);
   align-items: flex-start;
+}
+
+#productDetails .detID {
+  font-size: 0.7em;
+  color: grey;
+}
+
+#productDetails .detPrice {
+  color: $mygreen;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid $myblack;
 }

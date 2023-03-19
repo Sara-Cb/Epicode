@@ -103,23 +103,17 @@ a {
   color: rgb(20, 30, 30);
 }
 
-#detBody {
-  max-height: 100vh;
-  height: 100%;
-}
-
 #detBody main {
   height: 80%;
   justify-content: flex-start;
 }
 
-#productDetails {
-  font-size: 2em;
+#detBody .container {
+  height: 100%;
 }
 
-#productDetails .detID {
-  font-size: 0.8em;
-  color: grey;
+#productDetails {
+  font-size: 1.2em;
 }
 
 #productDetails > div:last-child {
@@ -129,6 +123,18 @@ a {
   justify-content: space-between;
   align-items: center;
   align-items: flex-start;
+}
+
+#productDetails .detID {
+  font-size: 0.7em;
+  color: grey;
+}
+
+#productDetails .detPrice {
+  color: rgb(0, 151, 151);
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgb(20, 30, 30);
 }
 
 #myForm {
@@ -186,6 +192,7 @@ footer {
 
 main {
   margin-top: 100px;
+  padding-top: 40px;
 }
 
 h1,
@@ -197,10 +204,12 @@ h3 {
 h1 {
   font-weight: 600;
   font-size: 2.5em;
+  margin-bottom: 15px;
 }
 
 h2 {
   font-size: 2em;
+  margin-bottom: 10px;
 }
 
 nav,
@@ -227,6 +236,11 @@ nav .active > a {
 nav a:hover,
 nav li:hover {
   color: #00fdfd !important;
+}
+
+.navbar-brand img {
+  height: 30px;
+  margin-top: 10px;
 }
 
 .btn,
