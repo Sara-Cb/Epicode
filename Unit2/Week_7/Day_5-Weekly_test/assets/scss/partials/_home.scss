@@ -34,27 +34,27 @@
 
 .cardPrice {
   font-size: 1.2em;
-  color: darkcyan;
+  color: $mygreen;
   text-align: center;
   padding: 5px;
-  border: 1px solid darkcyan;
+  border: 1px solid $myblack;
 }
 
 .card .details p {
   font-size: 0.7em;
 }
 
-.btn {
-  @include colorCombo("greenLight", $mywhite);
-  border: 1px solid black;
-}
-
 .hero {
   width: 100%;
-  @include colorCombo("dark", $mywhite);
+  @include colorCombo("greenLight", $mywhite);
   border: 2px solid $mygreen;
 }
 
 .hero p {
   width: 60%;
+}
+
+.hero h1,
+.hero h2 {
+  color: $myblack;
 }

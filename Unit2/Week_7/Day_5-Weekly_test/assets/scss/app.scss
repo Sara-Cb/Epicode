@@ -26,6 +26,15 @@ footer {
   @include myCenteringFlex;
 }
 
+.minicontainer {
+  @include mySpacingFlex(row, space-between);
+}
+
+.centering {
+  width: 100%;
+  @include myCenteringFlex;
+}
+
 main {
   margin-top: 100px;
 }
@@ -33,11 +42,11 @@ main {
 h1,
 h2,
 h3 {
-  font-weight: 600;
   color: $mygreen;
 }
 
 h1 {
+  font-weight: 600;
   font-size: 2.5em;
 }
 
@@ -48,16 +57,12 @@ h2 {
 nav,
 .navbar-expand-lg {
   width: 100%;
-  @include mySpacingFlex(row, space-between !important);
   padding: 1% 2%;
+  @include mySpacingFlex(row, space-between);
   @include colorCombo("darkGreen", $mywhite);
   * {
     color: $mygreen;
   }
-}
-
-.minicontainer {
-  @include mySpacingFlex(row, space-between);
 }
 
 nav .active > a {
@@ -70,7 +75,29 @@ nav li:hover {
   color: lighten($mygreen, 20%) !important;
 }
 
-.centering {
-  width: 100%;
-  @include myCenteringFlex;
+.btn,
+.navbar-toggler {
+  @include colorCombo("greenLight", $mywhite);
+  border: 1px solid black;
+  * {
+    color: $mywhite;
+  }
+}
+
+.btn:hover {
+  @include colorCombo("darkGreen", $mywhite);
+  border: 1px solid $mywhite;
+  * {
+    color: $mygreen;
+  }
+}
+
+.btn-danger {
+  background-color: $myred;
+}
+
+.btn-danger:hover {
+  background-color: $myblack;
+  color: $myred;
+  border: $mywhite;
 }

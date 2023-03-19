@@ -77,31 +77,30 @@ a {
 
 .cardPrice {
   font-size: 1.2em;
-  color: darkcyan;
+  color: rgb(0, 151, 151);
   text-align: center;
   padding: 5px;
-  border: 1px solid darkcyan;
+  border: 1px solid rgb(20, 30, 30);
 }
 
 .card .details p {
   font-size: 0.7em;
 }
 
-.btn {
-  background-color: rgb(0, 100, 100);
-  color: rgb(225, 255, 255);
-  border: 1px solid black;
-}
-
 .hero {
   width: 100%;
-  background-color: rgb(20, 30, 30);
+  background-color: rgb(0, 151, 151);
   color: rgb(225, 255, 255);
-  border: 2px solid rgb(0, 100, 100);
+  border: 2px solid rgb(0, 151, 151);
 }
 
 .hero p {
   width: 60%;
+}
+
+.hero h1,
+.hero h2 {
+  color: rgb(20, 30, 30);
 }
 
 #detBody {
@@ -170,6 +169,21 @@ footer {
   justify-content: center;
 }
 
+.minicontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.centering {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 main {
   margin-top: 100px;
 }
@@ -177,11 +191,11 @@ main {
 h1,
 h2,
 h3 {
-  font-weight: 600;
-  color: rgb(0, 100, 100);
+  color: rgb(0, 151, 151);
 }
 
 h1 {
+  font-weight: 600;
   font-size: 2.5em;
 }
 
@@ -192,40 +206,55 @@ h2 {
 nav,
 .navbar-expand-lg {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between !important;
-  align-items: center;
   padding: 1% 2%;
-  background-color: rgb(20, 30, 30);
-  color: rgb(0, 100, 100);
-}
-nav *,
-.navbar-expand-lg * {
-  color: rgb(0, 100, 100);
-}
-
-.minicontainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(20, 30, 30);
+  color: rgb(0, 151, 151);
+}
+nav *,
+.navbar-expand-lg * {
+  color: rgb(0, 151, 151);
 }
 
 nav .active > a {
   font-weight: bold !important;
-  color: #00caca !important;
+  color: #00fdfd !important;
 }
 
 nav a:hover,
 nav li:hover {
-  color: #00caca !important;
+  color: #00fdfd !important;
 }
 
-.centering {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.btn,
+.navbar-toggler {
+  background-color: rgb(0, 151, 151);
+  color: rgb(225, 255, 255);
+  border: 1px solid black;
+}
+.btn *,
+.navbar-toggler * {
+  color: rgb(225, 255, 255);
+}
+
+.btn:hover {
+  background-color: rgb(20, 30, 30);
+  color: rgb(0, 151, 151);
+  border: 1px solid rgb(225, 255, 255);
+}
+.btn:hover * {
+  color: rgb(0, 151, 151);
+}
+
+.btn-danger {
+  background-color: rgb(146, 0, 0);
+}
+
+.btn-danger:hover {
+  background-color: rgb(20, 30, 30);
+  color: rgb(146, 0, 0);
+  border: rgb(225, 255, 255);
 }/*# sourceMappingURL=app.css.map */
