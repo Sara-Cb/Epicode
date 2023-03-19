@@ -8,6 +8,7 @@ const productsDiv = document.getElementById("productsDiv");
 const rowReference = document.getElementById("rowReference");
 const loadingSpin = document.getElementById("loadingSpin");
 const title = document.querySelector("#detTitle");
+const research = document.getElementById("searchField");
 
 const hideDivs = function () {
   if (_id) {
@@ -19,8 +20,6 @@ const hideDivs = function () {
     getProducts();
   }
 };
-
-window.addEventListener("load", hideDivs);
 
 let showDetail = async (id) => {
   try {
@@ -60,9 +59,10 @@ let showDetail = async (id) => {
   }
 };
 
+//resta da implementare ricerca per qualsiasi campo, non solo id...
 searchDiv.addEventListener("submit", function (e) {
   e.preventDefault();
-  const searchedId = document.getElementById("searchField").value;
+  const searchedId = research.value;
   window.location.assign(`./details.html?_id=${searchedId}`);
   showDetail(searchedId);
 });
@@ -134,3 +134,5 @@ const getProducts = async function () {
     console.log(error);
   }
 };
+
+window.addEventListener("load", hideDivs);

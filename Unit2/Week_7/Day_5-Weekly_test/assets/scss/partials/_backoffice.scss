@@ -1,3 +1,33 @@
+nav#navBackoffice,
+#navBackoffice .navbar-expand-lg {
+  width: 100%;
+  padding: 1% 2%;
+  @include mySpacingFlex(row, space-between);
+  @include colorCombo("lightGreen", $mywhite);
+  * {
+    color: $mygreen;
+  }
+}
+
+#navBackoffice .active > a {
+  font-weight: bold !important;
+  color: darken($mygreen, 10%) !important;
+}
+
+#backofficeBody {
+  width: 100%;
+  @include colorCombo("darkGreen", $mywhite);
+}
+
+#backofficeBody .container {
+  @include myCenteringFlex;
+  width: 100%;
+}
+
+#backofficeBody .container > div {
+  width: 90%;
+}
+
 #myForm {
   @include mySpacingFlex(column, space-between);
   height: 400px;
@@ -7,4 +37,10 @@
 
 #myForm input {
   display: block;
+  width: 400px;
+}
+
+#myForm div:last-child {
+  width: 100%;
+  @include mySpacingFlex(row, space-between);
 }

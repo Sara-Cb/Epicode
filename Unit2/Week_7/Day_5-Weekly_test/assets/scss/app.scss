@@ -26,6 +26,10 @@ footer {
   @include myCenteringFlex;
 }
 
+.container {
+  width: 100%;
+}
+
 .minicontainer {
   @include mySpacingFlex(row, space-between);
 }

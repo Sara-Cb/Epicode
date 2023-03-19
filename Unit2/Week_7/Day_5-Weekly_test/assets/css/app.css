@@ -137,6 +137,45 @@ a {
   border: 1px solid rgb(20, 30, 30);
 }
 
+nav#navBackoffice,
+#navBackoffice .navbar-expand-lg {
+  width: 100%;
+  padding: 1% 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(225, 255, 255);
+  color: rgb(0, 151, 151);
+}
+nav#navBackoffice *,
+#navBackoffice .navbar-expand-lg * {
+  color: rgb(0, 151, 151);
+}
+
+#navBackoffice .active > a {
+  font-weight: bold !important;
+  color: #006464 !important;
+}
+
+#backofficeBody {
+  width: 100%;
+  background-color: rgb(20, 30, 30);
+  color: rgb(0, 151, 151);
+}
+
+#backofficeBody .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#backofficeBody .container > div {
+  width: 90%;
+}
+
 #myForm {
   display: flex;
   flex-direction: column;
@@ -150,6 +189,15 @@ a {
 
 #myForm input {
   display: block;
+  width: 400px;
+}
+
+#myForm div:last-child {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 html,
@@ -173,6 +221,10 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  width: 100%;
 }
 
 .minicontainer {
