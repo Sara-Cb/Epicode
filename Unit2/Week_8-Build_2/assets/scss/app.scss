@@ -1,0 +1,288 @@
+@import "./partials/reset";
+@import "./partials/mixins";
+@import "./partials/variables";
+@import "./partials/player";
+@import url("https://fonts.cdnfonts.com/css/circular-std");
+
+// Global
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+
+  @include colorCombo("dark");
+  * {
+    color: $white;
+    font-family: "Circular Std", Arial, Helvetica, sans-serif;
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.mainContainer,
+.mainRow {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mainRow {
+  margin-bottom: 100px;
+}
+
+.mainContainer {
+  height: calc(100% - 100px);
+}
+
+.mainRow,
+.mainLeft,
+.mainCenter,
+.mainRight,
+.mainLeft > div,
+.mainRight > div {
+  height: 100%;
+}
+
+.mainCenter {
+  .content {
+    height: 90%;
+    padding-top: 30px;
+    @include scrolly;
+  }
+}
+
+.mainLeft,
+.mainRight {
+  @include colorCombo("black");
+}
+
+.mainRight {
+  font-size: 0.7em;
+  h4 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 0.9rem;
+  }
+  p {
+    @include cutText;
+  }
+}
+
+.mainRight > div {
+  padding-top: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+  #mainRightOpened,
+  #mainRightClosed {
+    display: none;
+  }
+}
+
+.navbar {
+  height: 40%;
+  min-height: 340px;
+  @include spacingFlex(column, space-between, flex-start);
+  flex-wrap: nowrap;
+}
+
+.navbar-brand {
+  width: 90%;
+}
+
+.settings.dropdown-toggle::after {
+  display: none !important;
+}
+
+.mainCenter,
+.recentNav {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparentize($white, 0.4);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $white;
+  }
+}
+
+.recentNav {
+  height: 50%;
+  border-top: 1px solid transparentize($white, 0.4);
+  padding-top: 15px;
+  .row {
+    height: 100%;
+    @include scrolly;
+  }
+}
+
+#myUl li {
+  margin-bottom: 1.1em;
+}
+
+.topNav,
+.topNav > div {
+  height: 60px;
+  @include spacingFlex(row, space-between, center);
+}
+
+.topNav > div {
+  width: max-content;
+}
+
+.arrowIcons,
+.account {
+  @include spacingFlex(row, center, center);
+}
+
+.arrowIcons i {
+  height: 40px;
+  margin: 0 5px;
+  @include centeringFlex;
+  aspect-ratio: 1/1;
+  background-color: transparentize($black, 0.4);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.account {
+  width: 150px;
+  background-color: transparentize($black, 0.4);
+  border-radius: 2em;
+  padding: 5px 3px;
+  img {
+    height: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+  * {
+    margin-right: 5px;
+  }
+}
+
+.dropdown-toggle.show::after {
+  transform: rotate(180deg);
+}
+
+// CARDS
+.card,
+.dropdown-menu {
+  @include colorCombo("dark");
+}
+
+.dropdown-item {
+  color: $white !important;
+}
+.dropdown-item:hover {
+  color: $black !important;
+}
+
+.overflow {
+  @include cutText;
+}
+.albumCardHome {
+  width: 100%;
+  padding: 5px;
+  @include spacingFlex(row, start, center);
+  background-color: rgb(162, 161, 161, 0.2);
+  p {
+    width: 70% !important;
+  }
+  img {
+    width: 25%;
+    aspect-ratio: 1/1;
+  }
+}
+
+.trackItem {
+  height: 80px;
+  div {
+    height: inherit;
+  }
+  .trackBody {
+    @include spacingFlex(column, center, start);
+    height: 100%;
+    * {
+      height: fit-content;
+    }
+  }
+  h5 {
+    font-size: 1em;
+  }
+}
+
+.albumCard {
+  @include spacingFlex(column, space-between, center);
+  background-color: rgb(162, 161, 161, 0.2);
+  text-align: center;
+  min-height: 250px;
+}
+
+.albumCard:hover,
+.albumCardHome:hover {
+  background-color: rgb(162, 161, 161, 0.5);
+}
+
+.artistLink:hover {
+  text-decoration: underline;
+}
+
+.albumCardImg {
+  width: 90%;
+  aspect-ratio: 1/1;
+}
+
+.artistCard {
+  text-align: center;
+}
+
+.artistCardImg {
+  width: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+#artistCoverSpace {
+  margin-top: -80px;
+  height: 400px;
+  background-size: cover;
+}
+
+// BUTTONS - ICONS
+.myPlay {
+  font-size: 2.5em;
+  color: $green;
+}
+
+.bi-heart-fill {
+  color: $green;
+}
+
+i.bi,
+#hideAd {
+  cursor: pointer;
+}
+
+#hideAd {
+  background-color: transparentize($black, 0.3);
+  padding: 5px 15px;
+  border-radius: 2em;
+}
