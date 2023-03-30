@@ -1,0 +1,98 @@
+.playerSection {
+  z-index: 5;
+  padding: 10px;
+  background-color: $grey;
+  height: 100px;
+  border-top: 0.6px solid transparentize($white, 0.3);
+}
+
+@media screen and (max-width: 765px) {
+  .playerSection {
+    height: 80px;
+    margin-bottom: -20px;
+  }
+  #mobileNav {
+    z-index: 10;
+  }
+}
+
+#song {
+  @include spacingFlex(row, space-between, center);
+}
+
+#songData {
+  @include spacingFlex(row, flex-start, center);
+  #playerImg {
+    height: 70px;
+    aspect-ratio: 1/1;
+  }
+  * {
+    margin-right: 10px;
+  }
+}
+
+#playerComands {
+  @include centeringFlex;
+  #playerButtons,
+  #songTime {
+    @include spacingFlex(row, space-around, center);
+  }
+}
+
+#songTime {
+  * {
+    margin: 0 4px;
+  }
+}
+
+#playerIcons {
+  @include spacingFlex(row, flex-end, center);
+  * {
+    margin-left: 10px;
+  }
+}
+
+#playbutton {
+  font-size: 2em;
+}
+
+.playerSection {
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background-color: #808080;
+    border-radius: 3em;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
+  input[type="range"]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
+  #volume {
+    background-image: linear-gradient(
+      to right,
+      #ffffff 30%,
+      #808080 30%
+    ); //perchè inizialmente valore 3, poi cambia grazie js
+  }
+}
